@@ -48,7 +48,7 @@
                             <div class="mb-3">
                                 <input type="password" class="form-control" placeholder="Password" required>
                             </div>
-                            <button type="submit" class="btn btn-primary w-100">Masuk</button>
+                            <button type="submit" class="btn btn-primary w-100">Masuk <a href="dashboard.blade.php"></a></button>
                         </form>
                     </div>
                 </div>
