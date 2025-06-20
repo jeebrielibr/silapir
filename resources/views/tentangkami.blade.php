@@ -85,10 +85,10 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="beranda1.html">Beranda</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="tentangKami.html">Tentang Kami</a></li>
-                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="kontak.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="beranda.blade.php">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="tentangkami.blade.php">Tentang Kami</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.blade.php">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kontak.blade.php">Contact</a></li>
                 </ul>
             </div>
         </div>
