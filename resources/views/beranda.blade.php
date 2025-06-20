@@ -125,10 +125,10 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="beranda.blade.php">Beranda</a></li>
-                    <li class="nav-item"><a class="nav-link" href="tentangkami.blade.php">Tentang Kami</a></li>
-                    <li class="nav-item"><a class="nav-link" href="blog.blade.php">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="kontak.blade.php">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="beranda">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tentangkami">Tentang Kami</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kontak">Contact</a></li>
                 </ul>
             </div>
         </div>
