@@ -90,7 +90,8 @@
    <p class="keterangan-form">
         Form ini bertujuan untuk menampung laporan mahasiswa terkait permasalahan fasilitas, layanan,
         atau lingkungan kampus agar dapat segera ditindaklanjuti.</p>
-    <form id="aspirasiForm" enctype="multipart/form-data">
+    <form id="aspirasiForm" enctype="multipart/form-data" method="POST" action="{{ route('laporan.store') }}">
+        @csrf
         <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
             <div style="display: flex; flex-direction: column; flex: 1;">
                 <label for="nama">Nama Lengkap</label>
@@ -98,7 +99,7 @@
             </div>
             <div style="display: flex; flex-direction: column; flex: 1;">
                 <label for="nim">NIM</label>
-                <input type="text" id="nim" name="nim" required>
+                <input type="number" id="nim" name="nim" required>
             </div>
         </div>
 

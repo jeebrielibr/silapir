@@ -74,12 +74,13 @@
   <div class="form-container">
     <h2>Aspirasi</h2>
     <p>Form ini bertujuan untuk menampung aspirasi mahasiswa sebagai upaya perbaikan dan pengembangan kampus</p>
-    <form action="#" method="post">
+    <form action="#" method="post" id="formAspirasi" action="{{ route('aspirasi.store') }}">
+      @csrf
       <label for="nama">Nama Lengkap</label>
       <input type="text" id="nama" name="nama" required>
 
       <label for="nim">NIM</label>
-      <input type="text" id="nim" name="nim" required>
+      <input type="number" id="nim" name="nim" required>
 
       <label for="kategori">Kategori</label>
     <select id="kategori" name="kategori" required>
