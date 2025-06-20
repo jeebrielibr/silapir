@@ -110,8 +110,7 @@
         <option value="fasilitas">Laporan Fasilitas</option>
         <option value="fasilitas">Gangguan Jaringan Internet / WiFi</option>
         <option value="fasilitas">Kritik terhadap Dosen / Asdos</option>
-        <option value="fasilitas">Kekerasan / Perundungan (Bullying)</option>
-        <option value="fasilitas">Pelanggaran Etika Mahasiswa</option>
+        <option value="fasilitas">Kekerasan / Bullying</option>
       </select>
 
       <label for="isi">Isi Laporan Mahasiswa</label>

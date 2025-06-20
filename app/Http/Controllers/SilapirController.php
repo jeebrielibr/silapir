@@ -61,3 +61,4 @@ class SilapirController extends Controller
         return redirect()->back()->with('success', 'Aspirasi berhasil dikirim!');
     }
 }
+

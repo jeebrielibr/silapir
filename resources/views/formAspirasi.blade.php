@@ -88,7 +88,6 @@
         <option value="aspirasi">Fasilitas Kampus</option>
         <option value="aspirasi">Pengembangan Akademik</option>
         <option value="aspirasi">Kegiatan Mahasiswa</option>
-        <option value="aspirasi">Pengaduan Petugas Keamanan</option>
     </select>
 
       <label for="isi">Isi Aspirasi</label>
