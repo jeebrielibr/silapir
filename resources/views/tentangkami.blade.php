@@ -9,7 +9,8 @@
         body {
             background: linear-gradient(135deg, #e0e7ff 0%, #f8fafc 100%);
             min-height: 100vh;
-           font-family: 'Poppins', sans-serif;
+            font-family: 'Poppins', sans-serif; min-height: 100vh;
+            color: #222;
         }
          .navbar {
             background: rgba(255,255,255,0.95);
