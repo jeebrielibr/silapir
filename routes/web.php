@@ -26,6 +26,6 @@ Route::get('/formLaporan', function () {
 Route::get('/formAspirasi', function () {
     return view('formAspirasi');
 });
-Route::get('/welcome', function () {
-    return view('welcome');
+Route::get('/coba', function () {
+    return view('coba');
 });

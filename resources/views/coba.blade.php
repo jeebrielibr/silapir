@@ -1,26 +1,17 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Laporan & Aspirasi Mahasiswa</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
-    <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: #f8f9fa;
-            min-height: 100vh;
-            color: #222;
-        }
-        .navbar {
-            background: rgba(255,255,255,0.95);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-               .hero-section {
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog Laporan & Aspirasi Mahasiswa</title>
+  <!-- Bootstrap CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+    }
+     .hero-section {
             padding: 150px 0 150px 0;
             background: linear-gradient(120deg, #6366f1 60%, #818cf8 100%);
             color: #fff;
@@ -62,20 +53,18 @@
     .post-card:hover {
       box-shadow: 0 0 12px rgba(0,0,0,0.15);
     }
-      
-        footer {
-            background: #fff;
-            color: #4e54c8;
-            padding: 24px 0;
-            text-align: center;
-            margin-top: 60px;
-            font-size: 1rem;
-            letter-spacing: 1px;
-        }
-    </style>
+   
+    .footer {
+      background-color:white;
+      color: blue;
+      padding: 20px 0;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-     <!-- Navbar -->
+
+       <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
         <div class="container">
             <a class="navbar-brand fw-bold text-primary" href="#">Laporan Mahasiswa</a>
@@ -92,8 +81,7 @@
             </div>
         </div>
     </nav>
-
-  <!-- Hero Section -->
+     <!-- Hero Section -->
     <section class="hero-section position-relative">
         <div class="circle circle1"></div>
         <div class="circle circle2"></div>
@@ -230,5 +218,3 @@
                 // Animasi pada sidebar
                 document.querySelector('.col-md-4').classList.add('animate__animated', 'animate__fadeInRight');
             </script>
-</body>
-</html>
