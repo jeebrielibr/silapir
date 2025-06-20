@@ -20,3 +20,6 @@ Route::get('/blog', function () {
 Route::get('/kontak', function () {
     return view('kontak');
 });
+Route::get('/formaspirasi', function () {
+    return view('form_aspirasi');
+});
