@@ -290,7 +290,7 @@
             </ul>
           </div>
           <div class="tentang-image">
-            <img src="gedung-enep.webp" alt="Gedung STT-NF" />
+            <img src="{{ asset('img/gedung enep.webp') }}" alt="Foto">
           </div>
         </div>
         <h2 style="margin-top: 30px;">Alur Tujuan Sistem</h2>
