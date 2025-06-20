@@ -29,3 +29,6 @@ Route::get('/formAspirasi', function () {
 Route::get('/coba', function () {
     return view('coba');
 });
+Route::get('/coba1', function () {
+    return view('coba1');
+});
