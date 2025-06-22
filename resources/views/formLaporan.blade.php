@@ -21,6 +21,20 @@
     .navbar .nav-link:hover {
       color: #0d2b66 !important;
     }
+        .navbar .nav-link {
+      font-weight: 500;
+      color: #4e54c8 !important;
+      background-color: transparent;
+      border-radius: 8px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .navbar .nav-link:hover,
+    .navbar .nav-link:focus {
+      background-color: #4e54c8;
+      color: #fff !important;
+    }
+
     .form-container {
       background-color: white;
       padding: 1.5rem;
@@ -91,7 +105,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="beranda">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="beranda">Beranda</a></li>
           <li class="nav-item"><a class="nav-link" href="tentangkami">Tentang Kami</a></li>
           <li class="nav-item"><a class="nav-link" href="blog">Blog</a></li>
           <li class="nav-item"><a class="nav-link" href="kontak">Kontak</a></li>

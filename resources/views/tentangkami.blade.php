@@ -23,6 +23,19 @@
             background:rgba(255,255,255,.95);
             box-shadow:0 2px 8px rgba(0,0,0,.05)
         }
+        .navbar .nav-link {
+        font-weight: 500;
+        color: #4e54c8 !important;
+        background-color: transparent;
+        border-radius: 8px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .navbar .nav-link:hover,
+        .navbar .nav-link:focus {
+        background-color: #4e54c8;
+        color: #fff !important;
+        }
         footer{
             background:#fff;color:#4e54c8;padding:24px 0;text-align:center;
             margin-top:60px;font-size:1rem;letter-spacing:1px
