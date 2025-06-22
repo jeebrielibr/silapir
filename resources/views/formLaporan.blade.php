@@ -4,9 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Form Laporan Mahasiswa</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -27,7 +26,7 @@
       padding: 1.5rem;
       border-radius: 15px;
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-      width: 100%;
+      width: 90%;
       max-width: 800px;
       margin: 40px auto;
     }
@@ -80,142 +79,130 @@
   </style>
 </head>
 <body>
-
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
-  <div class="container">
-    <a class="navbar-brand fw-bold text-primary d-flex align-items-center" href="beranda">
-      <img src="{{ asset('img/logo.png') }}" alt="Logo" width="40" height="40" class="me-2">
-      Laporan Mahasiswa
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link active" href="beranda">Beranda</a></li>
-        <li class="nav-item"><a class="nav-link" href="tentangkami">Tentang Kami</a></li>
-        <li class="nav-item"><a class="nav-link" href="blog">Blog</a></li>
-        <li class="nav-item"><a class="nav-link" href="kontak">Kontak</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- Form Laporan -->
-<div class="form-container">
-  <h2>Laporan</h2>
-  <p class="keterangan-form">
-    Form ini bertujuan untuk menampung laporan mahasiswa terkait permasalahan fasilitas, layanan,
-    atau lingkungan kampus agar dapat segera ditindaklanjuti.
-  </p>
-  <form id="aspirasiForm" enctype="multipart/form-data" method="POST" action="{{ route('laporan.store') }}">
-    @csrf
-    <div class="row mb-3">
-      <div class="col-md-6">
-        <label for="nama">Nama Lengkap</label>
-        <input type="text" id="nama" name="nama" required />
-      </div>
-      <div class="col-md-6">
-        <label for="nim">NIM</label>
-        <input type="number" id="nim" name="nim" required />
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-primary d-flex align-items-center" href="beranda">
+        <img src="{{ asset('img/logo.png') }}" alt="Logo" width="40" height="40" class="me-2">
+        Laporan Mahasiswa
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="beranda">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="tentangkami">Tentang Kami</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="kontak">Kontak</a></li>
+        </ul>
       </div>
     </div>
+  </nav>
 
-    <label for="kategori">Kategori</label>
-    <select id="kategori" name="kategori" required>
-      <option value="" disabled selected>Pilih Kategori</option>
-      <option value="fasilitas">Laporan Fasilitas</option>
-      <option value="internet">Gangguan Jaringan Internet / WiFi</option>
-      <option value="kritik">Kritik terhadap Dosen / Asdos</option>
-      <option value="bullying">Kekerasan / Bullying</option>
-    </select>
-
-    <label for="isi">Isi Laporan Mahasiswa</label>
-    <textarea id="isi" name="isi" required></textarea>
-
-    <label for="bukti">Upload Bukti (Opsional)</label>
-    <input type="file" id="bukti" name="bukti" accept="image/*" />
-
-    <button type="submit" class="submit-btn">Kirim</button>
-    <div class="success-message" id="successMessage">Data berhasil dikirim!</div>
-  </form>
-</div>
-
-<!-- Bantuan & Kontak -->
-<section class="mt-5">
-  <div class="container text-center text-white">
-    <h5 class="fw-semibold mb-3">Butuh Bantuan Cepat?</h5>
-    <p>Hubungi kami melalui:</p>
-    <div class="row justify-content-center">
-      <div class="col-md-4">
-        <div class="bg-white text-dark rounded-4 p-4 shadow-sm">
-          <h6><i class="bi bi-telephone-fill me-2 text-primary"></i> Kontak</h6>
-          <p class="mb-1">+62 812 3456 7890</p>
-          <h6 class="mt-3"><i class="bi bi-envelope-fill me-2 text-primary"></i> Email</h6>
-          <p>lapormahasiswa@email.com</p>
+  <!-- Form Section -->
+  <div class="form-container">
+    <h2>Laporan</h2>
+    <p class="keterangan-form">Form ini bertujuan untuk menampung laporan mahasiswa terkait permasalahan fasilitas, layanan, atau lingkungan kampus agar dapat segera ditindaklanjuti.</p>
+    <form id="aspirasiForm" enctype="multipart/form-data" method="POST" action="{{ route('laporan.store') }}">
+      @csrf
+      <div class="row">
+        <div class="col-md-6">
+          <label for="nama">Nama Lengkap</label>
+          <input type="text" id="nama" name="nama" required>
+        </div>
+        <div class="col-md-6">
+          <label for="nim">NIM</label>
+          <input type="number" id="nim" name="nim" required>
         </div>
       </div>
-    </div>
+      <label for="kategori">Kategori</label>
+      <select id="kategori" name="kategori" required>
+        <option value="" disabled selected>Pilih Kategori</option>
+        <option value="fasilitas">Laporan Fasilitas</option>
+        <option value="internet">Gangguan Jaringan Internet / WiFi</option>
+        <option value="kritik">Kritik terhadap Dosen / Asdos</option>
+        <option value="kekerasan">Kekerasan / Bullying</option>
+      </select>
+      <label for="isi">Isi Laporan Mahasiswa</label>
+      <textarea id="isi" name="isi" required></textarea>
+      <label for="bukti">Upload Bukti (Opsional)</label>
+      <input type="file" id="bukti" name="bukti" accept="image/*" />
+      <button type="submit" class="submit-btn">Kirim</button>
+      <div class="success-message" id="successMessage">Data berhasil dikirim!</div>
+    </form>
   </div>
-</section>
 
-<!-- FAQ -->
-<section class="mt-5 py-4 bg-white text-dark">
-  <div class="container">
-    <h5 class="fw-bold text-center mb-4">Pertanyaan yang Sering Diajukan (FAQ)</h5>
-    <div class="accordion" id="faqAccordion">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="q1">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a1">
-            Apakah identitas pelapor akan dirahasiakan?
-          </button>
-        </h2>
-        <div id="a1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            Ya, semua laporan bersifat rahasia dan hanya dapat diakses oleh tim kampus yang berwenang.
+  <!-- FAQ Section -->
+  <section class="py-5" style="background: linear-gradient(135deg, #2c3e50, #34495e); color: #fff;">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="bg-white text-dark rounded-4 shadow p-4">
+            <h5 class="fw-bold text-center mb-4 text-primary">Pertanyaan yang Sering Diajukan (FAQ)</h5>
+            <div class="accordion accordion-flush" id="faqAccordion">
+              <div class="accordion-item mb-2 border rounded">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                    Apakah identitas pelapor akan dirahasiakan?
+                  </button>
+                </h2>
+                <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">Ya, semua laporan yang masuk bersifat rahasia dan hanya dapat diakses oleh pihak berwenang.</div>
+                </div>
+              </div>
+              <div class="accordion-item mb-2 border rounded">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                    Bagaimana cara melaporkan?
+                  </button>
+                </h2>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">Kamu bisa melaporkan langsung di laporan asprasi</div>
+                </div>
+              </div>
+              <div class="accordion-item mb-2 border rounded">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                    Berapa lama laporan akan ditindaklanjuti?
+                  </button>
+                </h2>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">Paling lambat dalam 3 hari kerja, laporan akan direspon oleh pihak kampus.</div>
+                </div>
+              </div>
+              <div class="accordion-item mb-2 border rounded">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                    Apakah bisa melaporkan tanpa nama?
+                  </button>
+                </h2>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">Ya, kamu dapat memilih untuk anonim saat mengisi form, namun akan lebih baik jika identitas disertakan untuk verifikasi.</div>
+                </div>
+              </div>
+            </div>
+            <div class="text-center mt-4">
+              <p class="mb-0 text-secondary">Masih punya pertanyaan? <a href="kontak" class="text-decoration-none text-primary fw-semibold">Hubungi kami langsung</a>.</p>
+            </div>
           </div>
         </div>
       </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="q2">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2">
-            Kapan laporan saya akan ditindaklanjuti?
-          </button>
-        </h2>
-        <div id="a2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            Dalam waktu maksimal 3 hari kerja, Anda akan menerima notifikasi atau tanggapan resmi.
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Tombol Navigasi -->
-<div class="container text-center mt-4">
-  <a href="beranda" class="btn btn-outline-light me-2">← Kembali ke Beranda</a>
-  <a href="statusLaporan" class="btn btn-warning">Cek Status Laporan</a>
-</div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const form = document.getElementById('aspirasiForm');
+    const successMsg = document.getElementById('successMessage');
 
-<!-- Footer -->
-<footer class="bg-white mt-5 text-center text-muted py-3 border-top">
-  &copy; 2024 Laporan Mahasiswa. Hak Cipta Dilindungi.
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-  const form = document.getElementById('aspirasiForm');
-  const successMsg = document.getElementById('successMessage');
-
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    setTimeout(() => {
-      successMsg.style.display = 'block';
-      form.reset();
-    }, 500);
-  });
-</script>
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      setTimeout(() => {
+        successMsg.style.display = 'block';
+        form.reset();
+      }, 500);
+    });
+  </script>
 </body>
 </html>
