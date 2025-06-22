@@ -120,7 +120,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
         <div class="container">
             <a class="navbar-brand fw-bold text-primary d-flex align-items-center" href="{{ url('/') }}">
-            <img src="{{ asset('img/logo.png') }}" alt="Logo" width="60" height="60" class="me-2">
+            <img src="{{ asset('img/logo.png') }}" alt="Logo" width="40" height="40" class="me-2">
             Laporan Mahasiswa</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
