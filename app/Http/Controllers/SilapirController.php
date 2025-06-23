@@ -38,7 +38,7 @@ class SilapirController extends Controller
 
         $laporan->save();
 
-        return redirect()->back()->with('success', 'Laporan berhasil dikirim!');
+        return redirect('/')->with('success', 'Laporan berhasil dikirim!');
     }
 
     // ASPIRASI
@@ -58,7 +58,7 @@ class SilapirController extends Controller
 
         Aspirasi::create($validated);
 
-        return redirect()->back()->with('success', 'Aspirasi berhasil dikirim!');
+        return redirect('/')->with('success', 'Aspirasi berhasil dikirim!');
     }
 }
 

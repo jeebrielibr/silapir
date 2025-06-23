@@ -118,11 +118,6 @@
   <div class="form-container">
     <h2>Laporan</h2>
     <p class="keterangan-form">Form ini bertujuan untuk menampung laporan mahasiswa terkait permasalahan fasilitas, layanan, atau lingkungan kampus agar dapat segera ditindaklanjuti.</p>
-    @if(session('success'))
-        <div class="alert alert-success">
-            {{ session('success') }}
-        </div>
-    @endif
     <form id="aspirasiForm" enctype="multipart/form-data" method="POST" action="{{ route('laporan.store') }}">
       @csrf
       <div class="row">
