@@ -197,7 +197,7 @@
           <div class="feature-icon"><i class="fa-solid fa-file-alt"></i></div>
           <h5 class="fw-bold mb-2">Laporan Mahasiswa</h5>
           <p class="text-muted">Laporkan permasalahan akademik, fasilitas, atau administrasi kampus secara mudah dan cepat.</p>
-          <a href="formLaporan" class="btn btn-outline-primary">Buat Laporan</a>
+          <a href="laporan" class="btn btn-outline-primary">Buat Laporan</a>
         </div>
       </div>
       <div class="col-md-6">
@@ -214,5 +214,16 @@
     &copy; 2024 LaporAspirasi Mahasiswa. All rights reserved.
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  @if (session('success'))
   <script>
-    const canvas = document.querySelector('.hero-bg-anim')
+    Swal.fire({
+      icon: 'success',
+      title: 'Terima kasih!',
+      text: '{{ session('success') }}',
+      confirmButtonText: 'Tutup'
+    });
+  </script>
+  @endif
+  </body>
+  </html>

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Laporan;
 use App\Models\Aspirasi;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\DB;
 
 class SilapirController extends Controller
 {
@@ -35,6 +36,8 @@ class SilapirController extends Controller
             $path = $request->file('bukti_laporan')->store('public/bukti_laporan');
             $laporan->bukti_path = str_replace('public/', '', $path);
         }
+
+        //dd(\DB::connection()->getDatabaseName());
 
         $laporan->save();
 
