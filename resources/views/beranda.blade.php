@@ -37,6 +37,11 @@
       background-color: #4e54c8;
       color: #fff !important;
     }
+    .navbar .nav-link.active-page {
+      background-color: #4e54c8;
+      color: #fff !important;
+      border-radius: 8px;
+    }
 
     .hero {
       min-height: 80vh;
@@ -141,7 +146,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="beranda">Beranda</a></li>
+         <li class="nav-item"><a class="nav-link active-page" href="beranda">Beranda</a></li>
           <li class="nav-item"><a class="nav-link" href="tentangkami">Tentang Kami</a></li>
           <li class="nav-item"><a class="nav-link" href="blog">Blog</a></li>
           <li class="nav-item"><a class="nav-link" href="kontak">Kontak</a></li>

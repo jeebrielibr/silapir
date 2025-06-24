@@ -32,6 +32,12 @@
       background-color: #4e54c8;
       color: #fff !important;
     }    
+     .navbar .nav-link.active-page {
+      background-color: #4e54c8;
+      color: #fff !important;
+      border-radius: 8px;
+    }
+    
     .contact-section {
       margin-top: 80px;
       margin-bottom: 60px;
@@ -108,7 +114,7 @@
           <li class="nav-item"><a class="nav-link" href="beranda">Beranda</a></li>
           <li class="nav-item"><a class="nav-link" href="tentangkami">Tentang Kami</a></li>
           <li class="nav-item"><a class="nav-link" href="blog">Blog</a></li>
-          <li class="nav-item"><a class="nav-link active" href="kontak">Kontak</a></li>
+          <li class="nav-item"><a class="nav-link active-page" href="kontak">Kontak</a></li>
         </ul>
       </div>
     </div>

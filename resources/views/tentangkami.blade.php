@@ -36,6 +36,11 @@
         background-color: #4e54c8;
         color: #fff !important;
         }
+         .navbar .nav-link.active-page {
+        background-color: #4e54c8;
+        color: #fff !important;
+        border-radius: 8px;
+        }
         footer{
             background:#fff;color:#4e54c8;padding:24px 0;text-align:center;
             margin-top:60px;font-size:1rem;letter-spacing:1px
@@ -117,7 +122,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="beranda">Beranda</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="tentangkami">Tentang Kami</a></li>
+                    <li class="nav-item"><a class="nav-link active-page" href="tentangkami">Tentang Kami</a></li>
                     <li class="nav-item"><a class="nav-link" href="blog">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="kontak">Contact</a></li>
                 </ul>

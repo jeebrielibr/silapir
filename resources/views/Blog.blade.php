@@ -33,6 +33,11 @@
           background-color: #4e54c8;
           color: #fff !important;
         }
+         .navbar .nav-link.active-page {
+          background-color: #4e54c8;
+          color: #fff !important;
+          border-radius: 8px;
+        }
                .hero-section {
             padding: 150px 0 150px 0;
             background: linear-gradient(120deg, #6366f1 60%, #818cf8 100%);
@@ -101,7 +106,7 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="beranda">Beranda</a></li>
                     <li class="nav-item"><a class="nav-link" href="tentangkami">Tentang Kami</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="blog">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link active-page" href="blog">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="kontak">Contact</a></li>
                 </ul>
             </div>
