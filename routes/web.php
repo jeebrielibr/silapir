@@ -9,9 +9,7 @@ Route::post('/laporan', [SilapirController::class, 'storeLaporan'])->name('lapor
 
 Route::get('/aspirasi', [SilapirController::class, 'showAspirasiForm'])->name('aspirasi.form');
 Route::post('/aspirasi', [SilapirController::class, 'storeAspirasi'])->name('aspirasi.store');
-Route::get('/formAspirasi', function () {
-    return view('formAspirasi');
-});
+
 
 Route::get('/', function () {
     return view('beranda');

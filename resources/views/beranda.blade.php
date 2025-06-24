@@ -205,7 +205,7 @@
           <div class="feature-icon"><i class="fa-solid fa-comments"></i></div>
           <h5 class="fw-bold mb-2">Aspirasi Mahasiswa</h5>
           <p class="text-muted">Sampaikan ide, kritik, dan saran untuk pengembangan kampus yang lebih baik.</p>
-          <a href="formAspirasi" class="btn btn-outline-primary">Kirim Aspirasi</a>
+          <a href="aspirasi" class="btn btn-outline-primary">Kirim Aspirasi</a>
         </div>
       </div>
     </div>
