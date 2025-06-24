@@ -89,13 +89,10 @@
       background-color: #142646;
     }
 
-    footer {
-      background: #1f355e;
-      color: white;
-      text-align: center;
-      padding: 20px 0;
-      margin-top: 60px;
-    }
+   footer{
+            background:#fff;color:#4e54c8;padding:24px 0;text-align:center;
+            margin-top:60px;font-size:1rem;letter-spacing:1px
+        }
   </style>
 </head>
 <body>
@@ -169,7 +166,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-rm>
                 </div>
             </div>
         </div>
