@@ -210,8 +210,8 @@
       </div>
     </div>
   </section>
-  <footer class="bg-white text-center text-primary py-3 border-top">
-    &copy; 2024 LaporAspirasi Mahasiswa. All rights reserved.
+    <footer>
+    &copy; 2025 Laporan Aspirasi Mahasiswa
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
