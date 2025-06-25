@@ -20,6 +20,19 @@
             background: rgba(255,255,255,0.95);
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
+          .navbar .nav-link {
+          font-weight: 500;
+          color: #4e54c8 !important;
+          background-color: transparent;
+          border-radius: 8px;
+          transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .navbar .nav-link:hover,
+        .navbar .nav-link:focus {
+          background-color: #4e54c8;
+          color: #fff !important;
+        }
                .hero-section {
             padding: 150px 0 150px 0;
             background: linear-gradient(120deg, #6366f1 60%, #818cf8 100%);
@@ -174,6 +187,44 @@
             </div>
           </div>
         </div>
+        <div class="card mb-4 post-card">
+  <div class="row g-0">
+    <!-- Gambar -->
+    <div class="col-md-4">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZFJPQcHp4YKwMoK4G1fS7ABmdsrCo0N3RKg&s" class="img-fluid rounded-start" alt="Gambar Meja Rusak">
+    </div>
+    <!-- Teks -->
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Laporan: Terdapat Oknum Dosen</h5>
+        <p class="card-text">
+          Terdapat oknum dosen yang melakukan kekerasan terhadap mahasiswi...
+        </p>
+        <a href="#" class="btn btn-outline-primary">Lihat Detail</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="card mb-4 post-card">
+  <div class="row g-0">
+    <!-- Gambar -->
+    <div class="col-md-4">
+      <img src="https://i.pinimg.com/736x/3f/fa/cc/3ffaccc438ddca4f3fc08b9d3c58dd55.jpg" class="img-fluid rounded-start" alt="Gambar Pelanggaran Etika">
+    </div>
+    <!-- Teks -->
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Laporan: Mahasiswa Melakukan Pelangaran Etika Pendidikan</h5>
+        <p class="card-text">
+          Terdapat beberapa oknum mahasiswa melakukan pelanggaran etika pendidikan dengan melakukan plagiat...
+        </p>
+        <a href="#" class="btn btn-outline-primary">Lihat Detail</a>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 

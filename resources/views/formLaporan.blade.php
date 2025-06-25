@@ -21,6 +21,20 @@
     .navbar .nav-link:hover {
       color: #0d2b66 !important;
     }
+        .navbar .nav-link {
+      font-weight: 500;
+      color: #4e54c8 !important;
+      background-color: transparent;
+      border-radius: 8px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .navbar .nav-link:hover,
+    .navbar .nav-link:focus {
+      background-color: #4e54c8;
+      color: #fff !important;
+    }
+
     .form-container {
       background-color: white;
       padding: 1.5rem;
@@ -91,7 +105,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="beranda">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="beranda">Beranda</a></li>
           <li class="nav-item"><a class="nav-link" href="tentangkami">Tentang Kami</a></li>
           <li class="nav-item"><a class="nav-link" href="blog">Blog</a></li>
           <li class="nav-item"><a class="nav-link" href="kontak">Kontak</a></li>
@@ -109,7 +123,7 @@
       <div class="row">
         <div class="col-md-6">
           <label for="nama">Nama Lengkap</label>
-          <input type="text" id="nama" name="nama" required>
+          <input type="text" id="nama" name="nama_lengkap" required>
         </div>
         <div class="col-md-6">
           <label for="nim">NIM</label>
@@ -120,14 +134,13 @@
       <select id="kategori" name="kategori" required>
         <option value="" disabled selected>Pilih Kategori</option>
         <option value="fasilitas">Laporan Fasilitas</option>
-        <option value="internet">Gangguan Jaringan Internet / WiFi</option>
-        <option value="kritik">Kritik terhadap Dosen / Asdos</option>
-        <option value="kekerasan">Kekerasan / Bullying</option>
+        <option value="jaringan_wifi">Gangguan Jaringan Internet / WiFi</option>
+        <option value="kekerasan_bullying">Kekerasan / Bullying</option>
       </select>
       <label for="isi">Isi Laporan Mahasiswa</label>
-      <textarea id="isi" name="isi" required></textarea>
+      <textarea id="isi" name="detail_laporan" required></textarea>
       <label for="bukti">Upload Bukti (Opsional)</label>
-      <input type="file" id="bukti" name="bukti" accept="image/*" />
+      <input type="file" id="bukti" name="bukti_laporan" accept="image/*" />
       <button type="submit" class="submit-btn">Kirim</button>
       <div class="success-message" id="successMessage">Data berhasil dikirim!</div>
     </form>
@@ -196,13 +209,7 @@
     const form = document.getElementById('aspirasiForm');
     const successMsg = document.getElementById('successMessage');
 
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      setTimeout(() => {
-        successMsg.style.display = 'block';
-        form.reset();
-      }, 500);
-    });
+    
   </script>
 </body>
 </html>

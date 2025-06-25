@@ -3,218 +3,164 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Blog Laporan & Aspirasi Mahasiswa</title>
-  <!-- Bootstrap CSS CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Laporan & Aspirasi Mahasiswa</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f8f9fa;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #4e54c8 0%, #8f94fb 100%);
+      min-height: 100vh;
+      color: #222;
+      margin: 0;
+      padding: 0;
     }
-     .hero-section {
-            padding: 150px 0 150px 0;
-            background: linear-gradient(120deg, #6366f1 60%, #818cf8 100%);
-            color: #fff;
-            position: relative;
-            overflow: hidden;
-        }
-        .hero-section .circle {
-            position: absolute;
-            border-radius: 50%;
-            opacity: 0.15;
-            animation: float 6s ease-in-out infinite;
-        }
-        .circle1 { width: 200px; height: 200px; top: -60px; left: -60px; background: #fff; }
-        .circle2 { width: 120px; height: 120px; bottom: -40px; right: 10%; background: #fff; }
-        @keyframes float {
-            0%, 100% { transform: translateY(0);}
-            50% { transform: translateY(-20px);}
-        }
-        .hero-title {
-            font-size: 2.5rem;
-            font-weight: bold;
-            letter-spacing: 1px;
-            animation: fadeInDown 1s;
-        }
-        .hero-desc {
-            font-size: 1.2rem;
-            margin-top: 15px;
-            animation: fadeInUp 1.2s;
-        }
-    .hero {
-      background: #007bff;
-      color: white;
-      padding: 60px 20px;
+
+    .navbar {
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .navbar .nav-link {
+      font-weight: 500;
+      color: #4e54c8 !important;
+      background-color: transparent;
+      border-radius: 8px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .navbar .nav-link:hover,
+    .navbar .nav-link:focus {
+      background-color: #4e54c8;
+      color: #fff !important;
+    }
+
+    body {
+      background: linear-gradient(135deg, #2c3e50, #3498db);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .form-container {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      width: 100vh;
+    }
+
+    .form-container h2 {
       text-align: center;
+      margin-bottom: 1.5rem;
+      color: #2c3e50;
     }
-    .post-card {
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .submit-btn {
+      margin-top: 1.5rem;
+      width: 100%;
+      padding: 10px;
+      background-color: #3498db;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
       transition: 0.3s;
     }
-    .post-card:hover {
-      box-shadow: 0 0 12px rgba(0,0,0,0.15);
+
+    .submit-btn:hover {
+      background-color: #2980b9;
     }
-   
-    .footer {
-      background-color:white;
-      color: blue;
-      padding: 20px 0;
+
+        footer {
+      background: #fff;
+      color: #4e54c8;
+      padding: 24px 0;
       text-align: center;
+      margin-top: 60px;
+      font-size: 1rem;
+      letter-spacing: 1px;
     }
   </style>
 </head>
 <body>
 
-       <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
-        <div class="container">
-            <a class="navbar-brand fw-bold text-primary" href="#">Laporan Mahasiswa</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="beranda">Beranda</a></li>
-                    <li class="nav-item"><a class="nav-link" href="tentangkami">Tentang Kami</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="blog">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="kontak">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-     <!-- Hero Section -->
-    <section class="hero-section position-relative">
-        <div class="circle circle1"></div>
-        <div class="circle circle2"></div>
-        <div class="container text-center">
-            <h1 class="hero-title">Suara Mahasiswa Indonesia</h1>
-            <p class="hero-desc">Tempat berbagi laporan, inspirasi, dan aspirasi untuk masa depan kampus yang lebih baik.</p>
-            <!-- <a href="#" class="btn btn-light btn-lg mt-4 shadow-sm px-4 py-2 fw-semibold" style="color:#6366f1;">
-                <i class="fa-solid fa-paper-plane me-2"></i>Kirim Aspirasi
-            </a> -->
-        </div>
-    </section>
-
-
-  <!-- Hero Section
-  <div class="hero">
-    <h1></h1>
-    <p></p>
-  </div> -->
-
-  <!-- Content -->
-  <div class="container my-5">
-    <div class="row">
-      <!-- Blog Posts -->
-      <div class="col-md-8">
-        <div class="card mb-4 post-card">
-          <div class="row g-">
-            <!-- Gambar -->
-            <div class="col-md-4">
-              <img src="https://3.bp.blogspot.com/_jUAe8h_A_X4/S_zrKaC7Y1I/AAAAAAAAAB8/pYEf5TGZsDM/s1600/DSCN3764.jpg" class="img-fluid rounded-start" alt="Gambar Kursi">
-            </div>
-            <!-- Teks -->
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Aspirasi: Perbaikan Kursi Rusak di Ruang Kelas</h5>
-                <p class="card-text">
-                 Banyak mahasiswa mengusulkan perbaikan segera agar proses belajar menjadi lebih nyaman dan aman...
-                </p>
-                <a href="#" class="btn btn-outline-primary">Baca Selengkapnya</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card mb-4 post-card">
-          <div class="row g-">
-            <!-- Gambar -->
-            <div class="col-md-4">
-              <img src="https://i.pinimg.com/736x/f5/ea/e3/f5eae349e8c1366faab461e123ae31f9.jpg" class="img-fluid rounded-start" alt="Gambar Kursi">
-            </div>
-            <!-- Teks -->
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Aspirasi: Tambah Jam Operasional Perpustakaan</h5>
-                <p class="card-text">
-                  Banyak mahasiswa mengusulkan agar perpustakaan buka hingga pukul 10 malam untuk mendukung aktivitas belajar...
-                </p>
-                <a href="#" class="btn btn-outline-primary">Baca Selengkapnya</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card mb-4 post-card">
-          <div class="row g-">
-            <!-- Gambar -->
-            <div class="col-md-4">
-              <img src="https://i.pinimg.com/736x/45/42/97/4542971732d782881a97d14f0656c3fe.jpg" class="img-fluid rounded-start" alt="Gambar Toilet">
-            </div>
-            <!-- Teks -->
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Aspirasi: Perbaikan Fasilitas Toilet Kampus</h5>
-                <p class="card-text">
-                 Banyak mahasiswa meminta perbaikan serta jadwal pembersihan yang lebih rutin agar lingkungan kampus tetap nyaman dan sehat...
-                </p>
-                <a href="#" class="btn btn-outline-primary">Baca Selengkapnya</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-
-
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-primary d-flex align-items-center" href="{{ url('/') }}">
+        <img src="{{ asset('img/logo.png') }}" alt="Logo" width="40" height="40" class="me-2">
+        Laporan Mahasiswa
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="beranda">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="tentangkami">Tentang Kami</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="kontak">Kontak</a></li>
+        </ul>
       </div>
+    </div>
+  </nav>
 
-      <!-- Sidebar -->
-      <div class="col-md-4">
-        <div class="mb-4">
-          <h5>Cari Laporan</h5>
-          <input type="text" class="form-control" placeholder="Cari topik...">
-        </div>
-        <div class="mb-4">
-          <h5>Kategori</h5>
-          <ul class="list-group">
-            <li class="list-group-item">Fasilitas Kampus</li>
+  <div class="form-container">
+    <h2>Aspirasi</h2>
+    <p>Form ini bertujuan untuk menampung aspirasi mahasiswa sebagai upaya perbaikan dan pengembangan kampus</p>
+    <form action="#" method="post" id="formAspirasi" action="{{ route('aspirasi.store') }}">
+      @csrf
+      <label for="nama">Nama Lengkap</label>
+      <input type="text" id="nama" name="nama" required>
 
-            <li class="list-group-item">Akademik</li>
-            <li class="list-group-item">Kegiatan Mahasiswa</li>
-            <li class="list-group-item">Aspirasi</li>
-            <li class="list-group-item">Lainnya</li>
-            </ul>
-            </div>
-            <div>
-                <h5>Postingan Terbaru</h5>
-                <ul class="list-group" id="recent-posts">
-                    <li class="list-group-item">Laporan Fasilitas Rusak di Gedung C</li>
-                    <li class="list-group-item">Aspirasi: Tambah Jam Operasional Perpustakaan</li>
-                </ul>
-            </div>
-            </div>
-            </div>
-            </div>
+      <label for="nim">NIM</label>
+      <input type="number" id="nim" name="nim" required>
 
-            <!-- Footer -->
-            <footer class="footer mt-5">
-                <div class="container">
-                    <span>&copy; 2024 Aspirasi Mahasiswa. All rights reserved.</span>
-                </div>
-            </footer>
+      <label for="kategori">Kategori</label>
+    <select id="kategori" name="kategori" required>
+        <option value="" disabled selected>Pilih Kategori</option>
+        <option value="aspirasi">Fasilitas Kampus</option>
+        <option value="aspirasi">Pengembangan Akademik</option>
+        <option value="aspirasi">Kegiatan Mahasiswa</option>
+    </select>
 
-            <!-- Bootstrap JS CDN -->
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-            <!-- Animate.css CDN -->
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-            <script>
-                // Animasi pada hero section saat halaman dimuat
-                document.querySelector('.hero').classList.add('animate__animated', 'animate__fadeInDown');
+      <label for="isi">Isi Aspirasi</label>
+      <textarea id="isi" name="isi" required></textarea>
 
-                // Animasi pada setiap post card
-                document.querySelectorAll('.post-card').forEach(function(card, i) {
-                    card.classList.add('animate__animated', 'animate__fadeInUp');
-                    card.style.setProperty('animation-delay', (i * 0.2) + 's');
-                });
+      <button type="submit" class="submit-btn">Kirim</button>
+    </form>
+  </div>
 
-                // Animasi pada sidebar
-                document.querySelector('.col-md-4').classList.add('animate__animated', 'animate__fadeInRight');
-            </script>
+
+  <footer class="bg-white text-center text-primary py-3 border-top">
+    &copy; 2024 LaporAspirasi Mahasiswa. All rights reserved.
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const canvas = document.querySelector('.hero-bg-anim')

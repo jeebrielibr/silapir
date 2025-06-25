@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
+<hea
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Kontak Kami - Laporan Mahasiswa</title>
@@ -17,21 +17,21 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     }
 
-    .navbar-brand {
-      font-weight: 700;
-      color: #1f355e !important;
-    }
+   
 
-    .nav-link {
+        .navbar .nav-link {
       font-weight: 500;
-      color: #333;
+      color: #4e54c8 !important;
+      background-color: transparent;
+      border-radius: 8px;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
 
-    .nav-link.active,
-    .nav-link:hover {
-      color: #1f355e;
-    }
-
+    .navbar .nav-link:hover,
+    .navbar .nav-link:focus {
+      background-color: #4e54c8;
+      color: #fff !important;
+    }    
     .contact-section {
       margin-top: 80px;
       margin-bottom: 60px;
@@ -161,5 +161,12 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+rm>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
