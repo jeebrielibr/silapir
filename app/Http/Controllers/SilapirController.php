@@ -63,5 +63,14 @@ class SilapirController extends Controller
 
         return redirect('/')->with('success', 'Aspirasi berhasil dikirim!');
     }
+
+    public function index()
+    {
+        $totalLaporan = \App\Models\Laporan::count();
+        $totalAspirasi = \App\Models\Aspirasi::count();
+        $laporan = \App\Models\Laporan::all();
+        $aspirasi = \App\Models\Aspirasi::all();
+        return view('dashboard', compact('totalLaporan', 'totalAspirasi', 'laporan', 'aspirasi'));
+    }
 }
 
