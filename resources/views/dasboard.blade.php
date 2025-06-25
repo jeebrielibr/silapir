@@ -254,7 +254,11 @@
     <a class="nav-link" data-target="kontak">Kontak</a>
     <a class="nav-link" data-target="laporan">Laporan</a>
     <a class="nav-link" data-target="aspirasi">Aspirasi</a>
-    <a href="index.html">Logout</a>
+    <form id="logout-form" action={{route('logout')}} method="POST">
+        @csrf
+        <input type="submit" style="display:none">
+        <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+    </form>
   </div>
 
   <div class="main">
