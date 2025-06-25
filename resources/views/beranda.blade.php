@@ -38,6 +38,12 @@
       color: #fff !important;
     }
 
+    .navbar .nav-link.active-page {
+      background-color: #4e54c8;
+      color: #fff !important;
+      border-radius: 8px;
+    }
+
     .hero {
       min-height: 80vh;
       display: flex;
@@ -134,14 +140,14 @@
     <div class="container">
       <a class="navbar-brand fw-bold text-primary d-flex align-items-center" href="{{ url('/') }}">
         <img src="{{ asset('img/logo.png') }}" alt="Logo" width="40" height="40" class="me-2">
-        Laporan Mahasiswa
+        Laporan & Aspirasi Mahasiswa
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="beranda">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link active-page" href="beranda">Beranda</a></li>
           <li class="nav-item"><a class="nav-link" href="tentangkami">Tentang Kami</a></li>
           <li class="nav-item"><a class="nav-link" href="blog">Blog</a></li>
           <li class="nav-item"><a class="nav-link" href="kontak">Kontak</a></li>
@@ -192,7 +198,7 @@
           <div class="feature-icon"><i class="fa-solid fa-file-alt"></i></div>
           <h5 class="fw-bold mb-2">Laporan Mahasiswa</h5>
           <p class="text-muted">Laporkan permasalahan akademik, fasilitas, atau administrasi kampus secara mudah dan cepat.</p>
-          <a href="formLaporan" class="btn btn-outline-primary">Buat Laporan</a>
+          <a href="laporan" class="btn btn-outline-primary">Buat Laporan</a>
         </div>
       </div>
       <div class="col-md-6">
@@ -200,7 +206,7 @@
           <div class="feature-icon"><i class="fa-solid fa-comments"></i></div>
           <h5 class="fw-bold mb-2">Aspirasi Mahasiswa</h5>
           <p class="text-muted">Sampaikan ide, kritik, dan saran untuk pengembangan kampus yang lebih baik.</p>
-          <a href="formAspirasi" class="btn btn-outline-primary">Kirim Aspirasi</a>
+          <a href="aspirasi" class="btn btn-outline-primary">Kirim Aspirasi</a>
         </div>
       </div>
     </div>
@@ -208,17 +214,30 @@
 
   <!-- Footer -->
   <footer class="bg-white text-center text-primary py-3 border-top">
-    &copy; 2024 LaporAspirasi Mahasiswa. All rights reserved.
+    &copy; 2025 LaporAspirasi Mahasiswa. All rights reserved.
   </footer>
 
   <!-- JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
   <script>
+    // Animasi canvas
     const canvas = document.querySelector('.hero-bg-anim');
     if (canvas && canvas.getContext) {
       const ctx = canvas.getContext('2d');
-      // Placeholder: kamu bisa tambahkan animasi di sini nanti
+      // Kamu bisa menambahkan animasi canvas di sini
     }
+
+    // SweetAlert jika ada session success
+    @if (session('success'))
+    Swal.fire({
+      icon: 'success',
+      title: 'Terima kasih!',
+      text: '{{ session('success') }}',
+      confirmButtonText: 'Tutup'
+    });
+    @endif
   </script>
 </body>
 </html>

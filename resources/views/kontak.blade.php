@@ -9,29 +9,36 @@
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      background: #f2f6fa;
+      background: linear-gradient(120deg, #6366f1 60%, #818cf8 100%);
+      min-height: 100vh;
+      color: #222;
+      margin: 0;
+      padding: 0;
     }
 
-    .navbar {
-      background: #ffffff;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    }
-
-   
-
+    .navbar{
+            background:rgba(255,255,255,.95);
+            box-shadow:0 2px 8px rgba(0,0,0,.05)
+        }
         .navbar .nav-link {
-      font-weight: 500;
-      color: #4e54c8 !important;
-      background-color: transparent;
-      border-radius: 8px;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
+        font-weight: 500;
+        color: #4e54c8 !important;
+        background-color: transparent;
+        border-radius: 8px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        }
 
-    .navbar .nav-link:hover,
-    .navbar .nav-link:focus {
-      background-color: #4e54c8;
-      color: #fff !important;
-    }    
+        .navbar .nav-link:hover,
+        .navbar .nav-link:focus {
+        background-color: #4e54c8;
+        color: #fff !important;
+        }
+         .navbar .nav-link.active-page {
+        background-color: #4e54c8;
+        color: #fff !important;
+        border-radius: 8px;
+        }
+    
     .contact-section {
       margin-top: 80px;
       margin-bottom: 60px;
@@ -83,36 +90,34 @@
       background-color: #142646;
     }
 
-    footer {
-      background: #1f355e;
-      color: white;
-      text-align: center;
-      padding: 20px 0;
-      margin-top: 60px;
-    }
+   footer{
+            background:#fff;color:#4e54c8;padding:24px 0;text-align:center;
+            margin-top:60px;font-size:1rem;letter-spacing:1px
+        }
   </style>
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light sticky-top">
-    <div class="container">
-       <a class="navbar-brand fw-bold text-primary d-flex align-items-center" href="{{ url('/') }}">
-            <img src="{{ asset('img/logo.png') }}" alt="Logo" width="40" height="40" class="me-2">
-            Laporan Mahasiswa</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="beranda">Beranda</a></li>
-          <li class="nav-item"><a class="nav-link" href="tentangkami">Tentang Kami</a></li>
-          <li class="nav-item"><a class="nav-link" href="blog">Blog</a></li>
-          <li class="nav-item"><a class="nav-link active" href="kontak">Kontak</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+<!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary d-flex align-items-center" href="{{ url('/') }}">
+                <img src="{{ asset('img/logo.png') }}" alt="Logo" width="40" height="40" class="me-2">
+                Laporan & Aspirasi Mahasiswa
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="beranda">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tentangkami">Tentang Kami</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link active-page" href="kontak">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
   <!-- Contact Section -->
   <div class="container">
@@ -163,7 +168,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-rm>
                 </div>
             </div>
         </div>
