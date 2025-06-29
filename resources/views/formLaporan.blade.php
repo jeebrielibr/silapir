@@ -118,6 +118,15 @@
   <div class="form-container">
     <h2>Laporan</h2>
     <p class="keterangan-form">Form ini bertujuan untuk menampung laporan mahasiswa terkait permasalahan fasilitas, layanan, atau lingkungan kampus agar dapat segera ditindaklanjuti.</p>
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
     <form id="aspirasiForm" enctype="multipart/form-data" method="POST" action="{{ route('laporan.store') }}">
       @csrf
       <div class="row">
@@ -205,11 +214,16 @@
   </section>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  @if (session('success'))
   <script>
-    const form = document.getElementById('aspirasiForm');
-    const successMsg = document.getElementById('successMessage');
-
-    
+    Swal.fire({
+      icon: 'success',
+      title: 'Terima kasih!',
+      text: '{{ session('success') }}',
+      confirmButtonText: 'Tutup'
+    });
   </script>
+  @endif
 </body>
 </html>

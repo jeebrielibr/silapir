@@ -37,7 +37,6 @@
           background-color: #4e54c8;
           color: #fff !important;
           border-radius: 8px;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
                .hero-section {
             padding: 150px 0 150px 0;

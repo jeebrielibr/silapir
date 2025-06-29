@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Login Animasi</title>
+    <title>Register Animasi</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
@@ -39,18 +39,29 @@
             <div class="col-12 col-sm-8 col-md-6 col-lg-4">
                 <div class="card login-container shadow-lg">
                     <div class="card-body">
-                        <h2 class="card-title text-center mb-2">Login</h2>
+                        <h2 class="card-title text-center mb-2">Register</h2>
                         <p class="text-center text-secondary">Only Admin</p>
-                        <form>
+                        <form action={{route('register')}} method="POST">
+                          @csrf
                             <div class="mb-3">
-                                <input type="text" class="form-control" placeholder="Username" required>
+                                <input type="text" class="form-control" placeholder="Username" name='username' required value="{{old('username')}}">
+                                @error('username')
+                                    <p class="text-danger">{{$message   }}</p>
+                                @enderror
                             </div>
                             <div class="mb-3">
-                                <input type="password" class="form-control" placeholder="Password" required>
+                                <input type="email" class="form-control" placeholder="Email" name="email" value="{{old('email')}}" required>
                             </div>
-                            <button type="submit" class="btn btn-primary w-100">Masuk <a href="dashboard.blade.php"></a></button>
+                            <div class="mb-3">
+                                <input type="password" class="form-control" placeholder="Password" name='password' required>
+                                @error('password')
+                                    <p class="text-danger">{{$message}}</p>
+                                @enderror
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Buat Akun</button>
                         </form>
                     </div>
+
                 </div>
             </div>
         </div>

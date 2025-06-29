@@ -40,7 +40,6 @@
         background-color: #4e54c8;
         color: #fff !important;
         border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         footer{
             background:#fff;color:#4e54c8;padding:24px 0;text-align:center;
