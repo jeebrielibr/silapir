@@ -197,8 +197,7 @@
                     <div class="row g-">
                         <!-- Gambar -->
                         <div class="col-md-4">
-                            <img src="https://i.pinimg.com/736x/f5/ea/e3/f5eae349e8c1366faab461e123ae31f9.jpg"
-                                class="img-fluid rounded-start" alt="Gambar Kursi">
+                            <img src="https://i.pinimg.com/736x/f5/ea/e3/f5eae349e8c1366faab461e123ae31f9.jpg"class="img-fluid rounded-start" alt="Gambar Kursi">
                         </div>
                         <!-- Teks -->
                         <div class="col-md-8">

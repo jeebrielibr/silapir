@@ -13,10 +13,10 @@ Route::post('/aspirasi', [SilapirController::class, 'storeAspirasi'])->name('asp
 
 
 Route::get('/', function () {
-    return view('beranda');
+    return view('landing page');
 });
 Route::get('/beranda', function () {
-    return view('beranda');
+    return view('landing page');
 });
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [App\Http\Controllers\SilapirController::class, 'index'])->name('dashboard');

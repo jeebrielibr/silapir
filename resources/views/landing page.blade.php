@@ -9,8 +9,8 @@
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="{{ asset('assets/img/favicon.png') }}" rel="icon">
+  <link href="{{ asset('assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -18,14 +18,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/aos/aos.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
 
   <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Arsha
@@ -41,9 +41,9 @@
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
+      <a href="{{ url('/') }}" class="logo d-flex align-items-center me-auto">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="assets/img/logo.png" alt="Logo" width="40" height="40" class="me-2">
+        <img src="{{ asset('assets/img/logo.png') }}" alt="Logo" width="40" height="40" class="me-2">
         Laporan & Aspirasi Mahasiswa
       </a>
 
@@ -52,7 +52,7 @@
           <li><a href="#hero" class="active">Home</a></li>
           <li><a href="#about">Tentang Kami</a></li>
           <li><a href="#team">Team</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <li><a href="{{ url('blog') }}">Blog</a></li>
           <li class="dropdown"><a href="#"><span>Kirim Aspirasi & Laporan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="#">Aspirasi</a></li>
@@ -82,7 +82,7 @@
               dan mudah digunakan untuk menyampaikan laporan permasalahan serta aspirasi demi menciptakan lingkungan kampus yang lebih baik.</p>
           </div>
           <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200">
-            <img src="assets/img/gedung enep.webp" class="img-fluid animated" alt="">
+            <img src="{{ asset('assets/img/gedung enep.webp') }}" class="img-fluid animated" alt="">
           </div>
         </div>
       </div>
@@ -195,7 +195,7 @@
           </div>
 
           <div class="col-lg-5 order-1 order-lg-2 why-us-img">
-            <img src="assets/img/why-us.png" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="100">
+            <img src="{{ asset('assets/img/why-us.png') }}" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="100">
           </div>
         </div>
 
@@ -218,7 +218,7 @@
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <div class="team-member d-flex align-items-start">
-              <div class="pic"><img src="assets/img/person/person-m-7.webp" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{ asset('assets/img/person/person-m-7.webp') }}" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Walter White</h4>
                 <span>Chief Executive Officer</span>
@@ -235,7 +235,7 @@
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <div class="team-member d-flex align-items-start">
-              <div class="pic"><img src="assets/img/person/person-f-8.webp" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{ asset('assets/img/person/person-f-8.webp') }}" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Sarah Jhonson</h4>
                 <span>Product Manager</span>
@@ -252,7 +252,7 @@
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
             <div class="team-member d-flex align-items-start">
-              <div class="pic"><img src="assets/img/person/person-m-6.webp" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{ asset('assets/img/person/person-m-6.webp') }}" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>William Anderson</h4>
                 <span>CTO</span>
@@ -269,7 +269,7 @@
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
             <div class="team-member d-flex align-items-start">
-              <div class="pic"><img src="assets/img/person/person-f-4.webp" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{ asset('assets/img/person/person-f-4.webp') }}" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Amanda Jepson</h4>
                 <span>Accountant</span>
@@ -317,18 +317,18 @@
                   <article>
 
                     <div class="post-img">
-                     <img src="https://3.bp.blogspot.com/_jUAe8h_A_X4/S_zrKaC7Y1I/AAAAAAAAAB8/pYEf5TGZsDM/s1600/DSCN3764.jpg"
+                     <img src="https://3.bp.blogspot.com/_jUAe8h_A_X4/S_zrKaC7Y1I/AAAAAAAAAB8/pYEf5TGZsDM/s1600/DSCN3764.jpg') }}"
                       class="img-fluid rounded-start" alt="Gambar Kursi">
                     </div>
 
                     <h2 class="title">
-                      <a href="blog-details.html">Aspirasi: Perbaikan Kursi Rusak di Ruang Kelas</a>
+                      <a href="{{ url('blog-details') }}">Aspirasi: Perbaikan Kursi Rusak di Ruang Kelas</a>
                     </h2>
                     
                     <div class="content">
                       <p>Banyak mahasiswa mengusulkan perbaikan segera agar proses belajar menjadi lebih nyaman dan aman.</p>
                       <div class="read-more">
-                        <a href="blog-details.html">Read More</a>
+                        <a href="{{ url('blog-details') }}">Read More</a>
                       </div>
                     </div>
 
@@ -340,18 +340,18 @@
                   <article>
 
                     <div class="post-img">
-                     <img src="https://i.pinimg.com/736x/f5/ea/e3/f5eae349e8c1366faab461e123ae31f9.jpg"
-                      class="img-fluid rounded-start" alt="Gambar Kursi">
+                     <img src="{{ asset('assets/img/image.png') }}"
+                      class="img-fluid rounded-start" alt="Gambar Jam Operasional Perpustakaan">
                     </div>
 
                     <h2 class="title">
-                      <a href="blog-details.html">Aspirasi: Tambah Jam Operasional Perpustakaan</a>
+                      <a href="{{ url('blog-details') }}">Aspirasi: Tambah Jam Operasional Perpustakaan</a>
                     </h2>
                     
                     <div class="content">
                       <p>Banyak mahasiswa mengusulkan agar perpustakaan buka hingga pukul 10 malam untuk mendukung aktivitas belajar</p>
                       <div class="read-more">
-                        <a href="blog-details.html">Read More</a>
+                        <a href="{{ url('blog-details') }}">Read More</a>
                       </div>
                     </div>
 
@@ -363,19 +363,19 @@
                   <article>
 
                     <div class="post-img">
-                      <img src="https://i.pinimg.com/736x/45/42/97/4542971732d782881a97d14f0656c3fe.jpg"
+                     <img src="{{ asset('assets/img/toilet.jpeg') }}"
                       class="img-fluid rounded-start" alt="Gambar Toilet">
                     </div>
 
                     <h2 class="title">
-                      <a href="blog-details.html">Aspirasi: Perbaikan Fasilitas Toilet Kampus</a>
+                      <a href="{{ url('blog-details') }}">Aspirasi: Perbaikan Fasilitas Toilet Kampus</a>
                     </h2>
 
                     <div class="content">
                       <p>
                         Banyak mahasiswa meminta perbaikan serta jadwal pembersihan yang lebih rutin agar lingkungan kampus tetap nyaman dan sehat.</p>
                       <div class="read-more">
-                        <a href="blog-details.html">Read More</a>
+                        <a href="{{ url('blog-details') }}">Read More</a>
                       </div>
                     </div>
 
@@ -388,18 +388,18 @@
                   <article>
 
                     <div class="post-img">
-                      <img src="https://i.pinimg.com/736x/3f/fa/cc/3ffaccc438ddca4f3fc08b9d3c58dd55.jpg"
+                      <img src="{{ asset('assets/img/plagiat.jpg') }}"
                       class="img-fluid rounded-start" alt="Gambar Pelanggaran Etika">
                     </div>
 
                     <h2 class="title">
-                      <a href="blog-details.html">Laporan: Mahasiswa Melakukan Pelangaran Etika Pendidikan</a>
+                      <a href="{{ url('blog-details') }}">Laporan: Mahasiswa Melakukan Pelangaran Etika Pendidikan</a>
                     </h2>
                     
                     <div class="content">
                       <p>Terdapat beberapa oknum mahasiswa melakukan pelanggaran etika pendidikan dengan melakukan plagiat.</p>
                       <div class="read-more">
-                        <a href="blog-details.html">Read More</a>
+                        <a href="{{ url('blog-details') }}">Read More</a>
                       </div>
                     </div>
 
@@ -596,7 +596,7 @@
     <div class="container footer-top">
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="d-flex align-items-center">
+          <a href="{{ url('/') }}" class="d-flex align-items-center">
             <span class="sitename">Laporan & Aspirasi</span>
           </a>
           <div class="footer-contact pt-3">
@@ -654,17 +654,17 @@
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ asset('assets/vendor/php-email-form/validate.js') }}"></script>
+  <script src="{{ asset('assets/vendor/aos/aos.js') }}"></script>
+  <script src="{{ asset('assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
+  <script src="{{ asset('assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
+  <script src="{{ asset('assets/vendor/waypoints/noframework.waypoints.js') }}"></script>
+  <script src="{{ asset('assets/vendor/imagesloaded/imagesloaded.pkgd.min.js') }}"></script>
+  <script src="{{ asset('assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
 
   <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="{{ asset('assets/js/main.js') }}"></script>
 
 </body>
 
