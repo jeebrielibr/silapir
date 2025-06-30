@@ -82,7 +82,7 @@
               dan mudah digunakan untuk menyampaikan laporan permasalahan serta aspirasi demi menciptakan lingkungan kampus yang lebih baik.</p>
           </div>
           <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200">
-            <img src="{{ asset('assets/img/gedung enep.webp') }}" class="img-fluid animated" alt="">
+            <img src="{{ asset('assets/img/stt.png') }}" class="img-fluid animated" alt="">
           </div>
         </div>
       </div>
