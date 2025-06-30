@@ -254,12 +254,20 @@
     <a class="nav-link" data-target="kontak">Kontak</a>
     <a class="nav-link" data-target="laporan">Laporan</a>
     <a class="nav-link" data-target="aspirasi">Aspirasi</a>
+<<<<<<< HEAD:resources/views/dasboard.blade.php
+    <form id="logout-form" action={{route('logout')}} method="POST">
+        @csrf
+        <input type="submit" style="display:none">
+        <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+    </form>
+=======
    <form id="logout-form" action="{{ route('logout') }}" method="POST">
         @csrf
         <input type="submit" style="display: none;">
         <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
     </form>
 
+>>>>>>> fb8b48e3fb2dfbeb8cc567cca74588e016d0f1ec:resources/views/dashboard.blade.php
   </div>
 
   <div class="main">
