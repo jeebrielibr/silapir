@@ -55,8 +55,8 @@
           <li><a href="#blog">Blog</a></li>
           <li class="dropdown"><a href="#"><span>Kirim Aspirasi & Laporan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="#">Aspirasi</a></li>
-              <li><a href="#">Laporan</a></li>
+              <li><a href="{{ url('/aspirasi') }}">Aspirasi</a></li>
+              <li><a href="{{ url('/laporan') }}">Laporan</a></li>
             </ul>
           </li>
           <li><a href="#contact">Contact</a></li>
@@ -82,7 +82,7 @@
               dan mudah digunakan untuk menyampaikan laporan permasalahan serta aspirasi demi menciptakan lingkungan kampus yang lebih baik.</p>
           </div>
           <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200">
-            <img src="{{ asset('assets/img/mainlogo.png') }}" class="mx-auto d-block" style="width: 400px; height: auto;" alt="">
+            <img src="{{ asset('assets/img/logo_sttnf.png') }}" class="mx-auto d-block" style="width: 400px; height: auto;" alt="">
           </div>
         </div>
       </div>
