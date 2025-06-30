@@ -52,7 +52,7 @@
           <li><a href="#hero" class="active">Home</a></li>
           <li><a href="#about">Tentang Kami</a></li>
           <li><a href="#team">Team</a></li>
-          <li><a href="{{ url('blog') }}">Blog</a></li>
+          <li><a href="#blog">Blog</a></li>
           <li class="dropdown"><a href="#"><span>Kirim Aspirasi & Laporan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="#">Aspirasi</a></li>
@@ -89,9 +89,51 @@
 
     </section><!-- /Hero Section -->
 
-    
+    <section id="form" class="features container py-5">
+  <div class="row g-4 mb-4">
+    <div class="col-md-4">
+      <div class="feature-card">
+        <div class="feature-icon"><i class="bi bi-megaphone-fill"></i></div>
+        <h5 class="fw-bold mb-2">Aspirasi Mahasiswa</h5>
+        <p>Sampaikan ide, kritik, dan saran untuk kemajuan kampus secara mudah dan cepat.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="feature-card">
+        <div class="feature-icon"><i class="bi bi-shield-check"></i></div>
+        <h5 class="fw-bold mb-2">Privasi Terjaga</h5>
+        <p>Identitas pelapor dijamin aman dan rahasia, sehingga kamu bisa lebih nyaman menyampaikan laporan.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="feature-card">
+        <div class="feature-icon"><i class="bi bi-lightning-charge-fill"></i></div>
+        <h5 class="fw-bold mb-2">Respon Cepat</h5>
+        <p>Laporan dan aspirasi akan segera ditindaklanjuti oleh pihak kampus secara transparan.</p>
+      </div>
+    </div>
+  </div>
+  <div class="row g-4">
+    <div class="col-md-6">
+      <div class="card feature-card text-center p-4 border-0 shadow-sm">
+        <div class="feature-icon"><i class="fa-solid fa-file-alt"></i></div>
+        <h5 class="fw-bold mb-2">Laporan Mahasiswa</h5>
+        <p class="text-muted">Laporkan permasalahan akademik, fasilitas, atau administrasi kampus secara mudah dan cepat.</p>
+        <a href="{{ url('form-laporan') }}" class="btn btn-outline-primary">Buat Laporan</a>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card feature-card text-center p-4 border-0 shadow-sm">
+        <div class="feature-icon"><i class="fa-solid fa-comments"></i></div>
+        <h5 class="fw-bold mb-2">Aspirasi Mahasiswa</h5>
+        <p class="text-muted">Sampaikan ide, kritik, dan saran untuk pengembangan kampus yang lebih baik.</p>
+        <a href="{{ url('form-aspirasi') }}" class="btn btn-outline-primary">Kirim Aspirasi</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-    </section><!-- /Clients Section -->
+    
 
     <!-- About Section -->
     <section id="about" class="about section">
