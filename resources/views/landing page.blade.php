@@ -644,8 +644,8 @@
 
         <div class="col-lg-2 col-md-3 footer-links">
           <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#report">Laporan</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#aspiration">Aspirasi</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="{{ url('formLaporan') }}">Laporan</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="{{ url('formAspirasi') }}">Aspirasi</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="#contact">Contact</a></li>
           </ul>
         </div>
