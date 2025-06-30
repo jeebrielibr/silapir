@@ -64,7 +64,7 @@
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="#about">Login Admin</a>
+      <a class="btn-getstarted" href="{{ url('formLaporan') }}" >Login Admin</a>
 
     </div>
   </header>
