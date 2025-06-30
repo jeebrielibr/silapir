@@ -119,7 +119,7 @@
         <div class="feature-icon"><i class="fa-solid fa-file-alt"></i></div>
         <h5 class="fw-bold mb-2">Laporan Mahasiswa</h5>
         <p class="text-muted">Laporkan permasalahan akademik, fasilitas, atau administrasi kampus secara mudah dan cepat.</p>
-        <a href="{{ url('form-laporan') }}" class="btn btn-outline-primary">Buat Laporan</a>
+        <a href="{{ url('formlaporan') }}" class="btn btn-outline-primary">Buat Laporan</a>
       </div>
     </div>
     <div class="col-md-6">
@@ -127,7 +127,7 @@
         <div class="feature-icon"><i class="fa-solid fa-comments"></i></div>
         <h5 class="fw-bold mb-2">Aspirasi Mahasiswa</h5>
         <p class="text-muted">Sampaikan ide, kritik, dan saran untuk pengembangan kampus yang lebih baik.</p>
-        <a href="{{ url('form-aspirasi') }}" class="btn btn-outline-primary">Kirim Aspirasi</a>
+        <a href="{{ url('formaspirasi') }}" class="btn btn-outline-primary">Kirim Aspirasi</a>
       </div>
     </div>
   </div>
