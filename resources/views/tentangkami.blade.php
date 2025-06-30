@@ -1,33 +1,72 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Laporan & Aspirasi Mahasiswa</title>
+    <title>Laporan & Aspirasi Mahasiswa – Tentang Kami</title>
+
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
-    <!-- Font Awesome CDN -->
+    <!-- Font Awesome & Bootstrap-icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
     <style>
+        /* ---------- Global ---------- */
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #e0e7ff 0%,rgb(144, 196, 248) 100%);
+            background: linear-gradient(120deg, #6366f1 60%, #818cf8 100%);
             min-height: 100vh;
-            color: #222;
+            color: #222
         }
+
         .navbar {
-            background: rgba(255,255,255,0.95);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            background: rgba(255, 255, 255, .95);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, .05)
         }
-               .hero {
+
+        .navbar .nav-link {
+            font-weight: 500;
+            color: #4e54c8 !important;
+            background-color: transparent;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .navbar .nav-link:hover,
+        .navbar .nav-link:focus {
+            background-color: #4e54c8;
+            color: #fff !important;
+        }
+
+        .navbar .nav-link.active-page {
+            background-color: #4e54c8;
+            color: #fff !important;
+            border-radius: 8px;
+        }
+
+        footer {
+            background: #fff;
+            color: #4e54c8;
+            padding: 24px 0;
+            text-align: center;
+            margin-top: 60px;
+            font-size: 1rem;
+            letter-spacing: 1px
+        }
+
+        /* ---------- Hero ---------- */
+        .hero {
             min-height: 80vh;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
-            overflow: hidden;
+            overflow: hidden
         }
+
         .hero-bg-anim {
             position: absolute;
             top: -50px;
@@ -37,144 +76,241 @@
             z-index: 0;
             pointer-events: none;
             animation: floatBg 10s infinite alternate ease-in-out;
-            opacity: 0.15;
+            opacity: .15
         }
+
         @keyframes floatBg {
-            0% { transform: translateY(0) scale(1);}
-            100% { transform: translateY(30px) scale(1.05);}
+            0% {
+                transform: translateY(0) scale(1)
+            }
+
+            100% {
+                transform: translateY(30px) scale(1.05)
+            }
         }
+
         .hero-content {
             position: relative;
             z-index: 1;
-            text-align: center;
+            text-align: center
         }
+
+        .hero-content h1,
+        .hero-content p {
+            color: #fff !important;
+            text-shadow: 0 2px 8px rgba(60, 60, 100, 0.18);
+        }
+
         .fade-in {
             opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInUp 1.2s forwards;
+            transform: translateY(40px);
+            animation: fadeInUp 1.2s ease forwards;
         }
-        .fade-in.delay-1 { animation-delay: 0.5s; }
-        .fade-in.delay-2 { animation-delay: 1s; }
-        .fade-in.delay-3 { animation-delay: 1.5s; }
+
+        .fade-in.delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .fade-in.delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .fade-in.delay-3 {
+            animation-delay: 0.6s;
+        }
+
         @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
+
+        /* ---------- About Section ---------- */
         .about-section {
             background: #fff;
             border-radius: 1rem;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+            box-shadow: 0 4px 24px rgba(0, 0, 0, .07);
             padding: 2rem 1.5rem;
             margin-top: -4rem;
             position: relative;
-            z-index: 2;
+            z-index: 2
         }
+
         .icon-anim {
-            animation: bounce 2s infinite;
+            animation: bounce 2s infinite, fadeInUp 1.2s ease forwards;
+            opacity: 0;
+            transform: translateY(40px);
+            animation-delay: 0.2s, 0s;
         }
+
+        .icon-anim.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .icon-anim {
+            animation: bounce 2s infinite
+        }
+
         @keyframes bounce {
-            0%, 100% { transform: translateY(0);}
-            50% { transform: translateY(-10px);}
+
+            0%,
+            100% {
+                transform: translateY(0)
+            }
+
+            50% {
+                transform: translateY(-10px)
+            }
         }
 
-        #tentang 
-         .tentang-wrapper, .kontak-wrapper {
-      background-color:   rgba(255, 255, 255, 0.92);
-      /* border-radius:  */
-      padding: 30px;
-      /* color: #2c3e50; */
-      /* box-shadow: 0 4px 12px rgba(0,0,0,0.1); */
-      margin-top: 20px;
-    }
+        /* Extra blocks (tentang / flowchart) */
+        #tentang .tentang-wrapper {
+            background: rgba(255, 255, 255, .92);
+            padding: 30px;
+            margin-top: 20px
+        }
 
-    /* .tentang-header h1, .kontak-wrapper h1 {
-      font-size: 28px;
-      margin-bottom: 10px;
-      color: #2c3e50;
-    } */
+        .tentang-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px
+        }
 
-    .tentang-header p, .kontak-wrapper p {
-      font-size: 16px;
-      color: #555;
-    }
+        .tentang-text,
+        .tentang-image {
+            flex: 1;
+            min-width: 250px
+        }
 
-    .tentang-content {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      margin-top: 20px;
-    }
+        .tentang-text ul {
+            padding-left: 20px;
+            list-style: none
+        }
 
-    .tentang-text, .tentang-image {
-      flex: 1;
-      min-width: 250px;
-    }
+        .tentang-text li {
+            margin-bottom: 10px;
+            font-size: 15px
+        }
 
-    .tentang-text h2 {
-      color: #3498db;
-      margin-bottom: 10px;
-    }
+        .tentang-text ul li span {
+            margin-right: 10px;
+        }
 
-    .tentang-text ul {
-      padding-left: 20px;
-      list-style: none;
-    }
+        .tentang-image img {
+            width: 80%;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, .2)
+        }
 
-    .tentang-text li {
-      margin-bottom: 10px;
-      font-size: 15px;
-    }
+        .flowchart {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px
+        }
 
-    .tentang-image img {
-      width: 80%;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
-    
-    .flowchart {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin-top: 20px;
-    }
+        .flow-item {
+            background: #3498db;
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 10px;
+            font-weight: bold;
+            min-width: 100px
+        }
 
-    .flow-item {
-      background-color: #3498db;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 10px;
-      font-weight: bold;
-      text-align: center;
-      min-width: 100px;
-    }
-      
-        footer {
-            background: #fff;
-            color: #4e54c8;
-            padding: 24px 0;
-            text-align: center;
-            margin-top: 60px;
-            font-size: 1rem;
+        /* ---------- Tim (Grid) ---------- */
+        .tim-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #ffffff;
             letter-spacing: 1px;
+            margin-bottom: 2.5rem;
+            text-align: center;
+            text-shadow: 0 2px 8px rgba(60, 60, 100, 0.10);
+        }
+
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
+            transition: transform .4s cubic-bezier(.4, 2, .6, 1)
+        }
+
+        .profile-card {
+            background: #f8f9fa;
+            border-radius: 16px;
+            padding: 28px 18px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
+            transition: transform .3s, box-shadow .3s;
+            opacity: 0;
+            transform: translateY(40px) scale(.95);
+            animation: fadeInUp .8s forwards
+        }
+
+        .profile-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .13)
+        }
+
+        .profile-card:hover .profile-img {
+            transform: scale(1.08) rotate(-2deg)
+        }
+
+        /* delay */
+        .profile-card:nth-child(1) {
+            animation-delay: .1s
+        }
+
+        .profile-card:nth-child(2) {
+            animation-delay: .2s
+        }
+
+        .profile-card:nth-child(3) {
+            animation-delay: .3s
+        }
+
+        .profile-card:nth-child(4) {
+            animation-delay: .4s
+        }
+
+        .profile-card:nth-child(5) {
+            animation-delay: .5s
+        }
+
+        .profile-card:nth-child(6) {
+            animation-delay: .6s
         }
     </style>
 </head>
+
 <body>
-     <!-- Navbar -->
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
         <div class="container">
-            <a class="navbar-brand fw-bold text-primary" href="#">Laporan Mahasiswa</a>
+            <a class="navbar-brand fw-bold text-primary d-flex align-items-center" href="{{ url('/') }}">
+                <img src="{{ asset('img/logo.png') }}" alt="Logo" width="40" height="40" class="me-2">
+                Laporan & Aspirasi Mahasiswa
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="beranda">Beranda</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="tentangkami">Tentang Kami</a></li>
+                    <li class="nav-item"><a class="nav-link active-page" href="tentangkami">Tentang Kami</a></li>
                     <li class="nav-item"><a class="nav-link" href="blog">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="kontak">Contact</a></li>
                 </ul>
@@ -182,11 +318,12 @@
         </div>
     </nav>
 
+    <!-- Hero -->
     <section class="hero">
         <svg class="hero-bg-anim" viewBox="0 0 800 600">
-            <ellipse cx="400" cy="300" rx="350" ry="180" fill="#6366f1"/>
-            <ellipse cx="600" cy="200" rx="120" ry="60" fill="#38bdf8"/>
-            <ellipse cx="200" cy="400" rx="100" ry="40" fill="#fbbf24"/>
+            <ellipse cx="400" cy="300" rx="350" ry="180" fill="#6366f1" />
+            <ellipse cx="600" cy="200" rx="120" ry="60" fill="#38bdf8" />
+            <ellipse cx="200" cy="400" rx="100" ry="40" fill="#fbbf24" />
         </svg>
         <div class="container hero-content">
             <div class="fade-in delay-2">
@@ -198,120 +335,168 @@
         </div>
     </section>
 
+    <!-- About -->
     <section id="about" class="container about-section mt-5">
         <div class="row align-items-center">
             <div class="col-md-4 text-center mb-4 mb-md-0">
-                <svg width="100" height="100" fill="none" class="icon-anim">
-                    <circle cx="50" cy="50" r="48" stroke="#6366f1" stroke-width="4" fill="#e0e7ff"/>
-                    <path d="M30 60 L50 40 L70 60" stroke="#38bdf8" stroke-width="4" fill="none"/>
-                    <circle cx="50" cy="50" r="8" fill="#fbbf24"/>
-                </svg>
+                <img src="{{ asset('img/logo.png') }}" alt="Logo Silapir" width="100" height="100"
+                    class="icon-anim mb-3" id="logo-anim" />
             </div>
             <div class="col-md-8 fade-in delay-1">
                 <h2 class="fw-bold mb-3">Siapa Kami?</h2>
-                <p>
-                    Kami adalah komunitas mahasiswa yang peduli terhadap transparansi, komunikasi, dan perubahan positif di lingkungan kampus. Melalui platform ini, mahasiswa dapat menyampaikan laporan permasalahan, ide, maupun aspirasi secara mudah, aman, dan terstruktur.
-                </p>
+                <p>Kami adalah komunitas mahasiswa yang peduli terhadap transparansi, komunikasi, dan perubahan positif
+                    di lingkungan kampus. Melalui platform ini, mahasiswa dapat menyampaikan laporan permasalahan, ide,
+                    maupun aspirasi secara mudah, aman, dan terstruktur.</p>
                 <ul class="list-unstyled mt-3">
-                    <li><span class="text-primary fw-bold">✔️</span> Menampung laporan dan aspirasi mahasiswa</li>
-                    <li><span class="text-primary fw-bold">✔️</span> Menjembatani komunikasi antara mahasiswa dan pihak kampus</li>
-                    <li><span class="text-primary fw-bold">✔️</span> Mendukung perubahan dan inovasi di lingkungan kampus</li>
+                    <li><span class="text-primary fw-bold"><i class="fa fa-check-circle"></i></span> Menampung laporan
+                        dan aspirasi mahasiswa</li>
+                    <li><span class="text-primary fw-bold"><i class="fa fa-check-circle"></i></span> Menjembatani
+                        komunikasi antara mahasiswa dan pihak kampus</li>
+                    <li><span class="text-primary fw-bold"><i class="fa fa-check-circle"></i></span> Mendukung perubahan
+                        dan inovasi di lingkungan kampus</li>
                 </ul>
             </div>
         </div>
     </section>
-    
+
+    <!-- Sistem & Flowchart -->
     <div class="section py-5" id="tentang">
-      <div class="tentang-wrapper">
-        <div class="tentang-header py-4">
-          <h1>Tentang Sistem Kami</h1>
-          <p>Menjembatani komunikasi antara mahasiswa dan kampus untuk membangun lingkungan akademik yang lebih baik.</p>
+        <div class="tentang-wrapper">
+            <div class="tentang-header py-4">
+                <h1>Visi Kami</h1>
+                <p>Menjembatani komunikasi antara mahasiswa dan kampus untuk membangun lingkungan akademik yang lebih
+                    baik.</p>
+            </div>
+
+            <div class="tentang-content fade-in delay-1">
+                <div class="tentang-text">
+                    <h2>Misi Kami</h2>
+                    <ul>
+                        <li><span class="text-primary"><i class="fa fa-thumbtack"></i></span> Menyediakan platform
+                            pelaporan fasilitas kampus.</li>
+                        <li><span class="text-primary"><i class="fa fa-bullhorn"></i></span> Menyerap dan mewadahi
+                            aspirasi mahasiswa secara langsung.</li>
+                        <li><span class="text-primary"><i class="fa fa-handshake"></i></span> Meningkatkan partisipasi
+                            dan keterlibatan seluruh civitas akademika.</li>
+                        <li><span class="text-primary"><i class="fa fa-search"></i></span> Mewujudkan transparansi dalam
+                            pengelolaan kampus.</li>
+                    </ul>
+                </div>
+                <div class="tentang-image">
+                    <img src="{{ asset('img/gedung enep.webp') }}" alt="Foto Gedung">
+                </div>
+            </div>
+
+            <h2 class="mt-4">Alur Tujuan Sistem</h2>
+            <div class="flowchart">
+                <div class="flow-item">Fasilitas</div>
+                <div class="arrow">→</div>
+                <div class="flow-item">Aspirasi</div>
+                <div class="arrow">→</div>
+                <div class="flow-item">Keterlibatan</div>
+                <div class="arrow">→</div>
+                <div class="flow-item">Transparansi</div>
+            </div>
         </div>
-        <div class="tentang-content fade-in delay-1">
-          <div class="tentang-text">
-            <h2>Misi Kami</h2>
-            <ul>
-              <li>📌 Menyediakan platform pelaporan fasilitas kampus.</li>
-              <li>📢 Menyerap dan mewadahi aspirasi mahasiswa secara langsung.</li>
-              <li>🤝 Meningkatkan partisipasi dan keterlibatan seluruh civitas akademika.</li>
-              <li>🔎 Mewujudkan transparansi dalam pengelolaan kampus.</li>
-            </ul>
-          </div>
-          <div class="tentang-image">
-            <img src="{{ asset('img/gedung enep.webp') }}" alt="Foto">
-          </div>
-        </div>
-        <h2 style="margin-top: 30px;">Alur Tujuan Sistem</h2>
-        <div class="flowchart">
-          <div class="flow-item">Fasilitas</div>
-          <div class="arrow">→</div>
-          <div class="flow-item">Aspirasi</div>
-          <div class="arrow">→</div>
-          <div class="flow-item">Keterlibatan</div>
-          <div class="arrow">→</div>
-          <div class="flow-item">Transparansi</div>
-        </div>
-      </div>
     </div>
 
+    <!-- Tim Pengembang (Grid) -->
+    <section class="py-5">
+        <h2 class="tim-title">Tim Pengembang Website</h2>
+        <div class="container">
+            <div class="row g-4 justify-content-center">
+
+                <!-- Profile 1 -->
+                <div class="col-md-4 col-sm-6 d-flex align-items-stretch">
+                    <div class="profile-card w-100 text-center">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Ahmad Fauzi"
+                            class="profile-img mb-3">
+                        <h5>Ahmad Fauzi</h5>
+                        <p class="text-muted">Web Developer</p>
+                        <p>Mengembangkan aplikasi web modern dan responsif untuk kebutuhan bisnis Anda.</p>
+                        <a href="mailto:ahmad@example.com" class="btn btn-primary btn-sm">Hubungi</a>
+                    </div>
+                </div>
+
+                <!-- Profile 2 -->
+                <div class="col-md-4 col-sm-6 d-flex align-items-stretch">
+                    <div class="profile-card w-100 text-center">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Siti Rahma"
+                            class="profile-img mb-3">
+                        <h5>Siti Rahma</h5>
+                        <p class="text-muted">UI/UX Designer</p>
+                        <p>Mendesain tampilan antarmuka yang menarik dan mudah digunakan.</p>
+                        <a href="mailto:siti@example.com" class="btn btn-primary btn-sm">Hubungi</a>
+                    </div>
+                </div>
+
+                <!-- Profile 3 -->
+                <div class="col-md-4 col-sm-6 d-flex align-items-stretch">
+                    <div class="profile-card w-100 text-center">
+                        <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Budi Santoso"
+                            class="profile-img mb-3">
+                        <h5>Budi Santoso</h5>
+                        <p class="text-muted">Backend Engineer</p>
+                        <p>Spesialis dalam pengelolaan database dan pengembangan API.</p>
+                        <a href="mailto:budi@example.com" class="btn btn-primary btn-sm">Hubungi</a>
+                    </div>
+                </div>
+
+                <!-- Profile 4 -->
+                <div class="col-md-4 col-sm-6 d-flex align-items-stretch">
+                    <div class="profile-card w-100 text-center">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Dewi Lestari"
+                            class="profile-img mb-3">
+                        <h5>Dewi Lestari</h5>
+                        <p class="text-muted">Frontend Developer</p>
+                        <p>Membuat tampilan website yang interaktif dan responsif.</p>
+                        <a href="mailto:dewi@example.com" class="btn btn-primary btn-sm">Hubungi</a>
+                    </div>
+                </div>
+
+                <!-- Profile 5 -->
+                <div class="col-md-4 col-sm-6 d-flex align-items-stretch">
+                    <div class="profile-card w-100 text-center">
+                        <img src="https://randomuser.me/api/portraits/men/77.jpg" alt="Rizky Pratama"
+                            class="profile-img mb-3">
+                        <h5>Rizky Pratama</h5>
+                        <p class="text-muted">Project Manager</p>
+                        <p>Mengelola proyek dan memastikan semua berjalan sesuai rencana.</p>
+                        <a href="mailto:rizky@example.com" class="btn btn-primary btn-sm">Hubungi</a>
+                    </div>
+                </div>
+
+                <!-- Profile 6 -->
+                <div class="col-md-4 col-sm-6 d-flex align-items-stretch">
+                    <div class="profile-card w-100 text-center">
+                        <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Indah Permata"
+                            class="profile-img mb-3">
+                        <h5>Indah Permata</h5>
+                        <p class="text-muted">Quality Assurance</p>
+                        <p>Menjamin kualitas aplikasi melalui pengujian yang menyeluruh.</p>
+                        <a href="mailto:indah@example.com" class="btn btn-primary btn-sm">Hubungi</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="bg-white text-center text-primary py-3 border-top">
-        &copy; 2024 LaporAspirasi Mahasiswa. All rights reserved.
+    <footer>
+        &copy; 2025 Laporan Aspirasi Mahasiswa
     </footer>
 
-    <!-- Bootstrap JS & Icons -->
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-
-    <!-- Hero Background Animation
     <script>
-        // Simple animated bubbles background
-        const canvas = document.querySelector('.hero-bg-anim');
-        const ctx = canvas.getContext('2d');
-        let bubbles = [];
-
-        function resizeCanvas() {
-            canvas.width = window.innerWidth;
-            canvas.height = document.querySelector('.hero').offsetHeight;
-        }
-        window.addEventListener('resize', resizeCanvas);
-
-        function createBubbles() {
-            bubbles = [];
-            for (let i = 0; i < 30; i++) {
-                bubbles.push({
-                    x: Math.random() * canvas.width,
-                    y: Math.random() * canvas.height,
-                    r: 10 + Math.random() * 30,
-                    d: 1 + Math.random() * 2,
-                    alpha: 0.2 + Math.random() * 0.3
-                });
-            }
-        }
-
-        function drawBubbles() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            for (let b of bubbles) {
-                ctx.beginPath();
-                ctx.arc(b.x, b.y, b.r, 0, 2 * Math.PI);
-                ctx.fillStyle = `rgba(255,255,255,${b.alpha})`;
-                ctx.fill();
-                b.y -= b.d;
-                if (b.y + b.r < 0) {
-                    b.y = canvas.height + b.r;
-                    b.x = Math.random() * canvas.width;
-                }
-            }
-            requestAnimationFrame(drawBubbles);
-        }
-
-        function initAnim() {
-            resizeCanvas();
-            createBubbles();
-            drawBubbles();
-        }
-        window.addEventListener('load', initAnim);
-    </script> -->
+        // Animasi logo muncul seperti fadeInUp
+        window.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                document.getElementById('logo-anim').classList.add('animated');
+            }, 200);
+        });
+    </script>
 </body>
+
 </html>

@@ -254,11 +254,20 @@
     <a class="nav-link" data-target="kontak">Kontak</a>
     <a class="nav-link" data-target="laporan">Laporan</a>
     <a class="nav-link" data-target="aspirasi">Aspirasi</a>
+<<<<<<< HEAD:resources/views/dasboard.blade.php
     <form id="logout-form" action={{route('logout')}} method="POST">
         @csrf
         <input type="submit" style="display:none">
         <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
     </form>
+=======
+   <form id="logout-form" action="{{ route('logout') }}" method="POST">
+        @csrf
+        <input type="submit" style="display: none;">
+        <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+    </form>
+
+>>>>>>> fb8b48e3fb2dfbeb8cc567cca74588e016d0f1ec:resources/views/dashboard.blade.php
   </div>
 
   <div class="main">
@@ -268,11 +277,11 @@
       <div class="home-cards">
         <div class="home-card">
           <h3>Total Laporan</h3>
-          <p id="totalLaporan">0</p>
+          <p id="totalLaporan">{{ $totalLaporan ?? 0 }}</p>
         </div>
         <div class="home-card">
           <h3>Total Aspirasi</h3>
-          <p id="totalAspirasi">0</p>
+          <p id="totalAspirasi">{{ $totalAspirasi ?? 0 }}</p>
         </div>
       </div>
     </div>
@@ -336,10 +345,25 @@
       <table id="laporanTable">
         <thead>
           <tr>
-            <th>Nama</th><th>NIM</th><th>Jurusan</th><th>Semester</th><th>Fasilitas</th><th>Detail</th>
+            <th>Nama</th><th>NIM</th><th>Kategori</th><th>Detail</th><th>Bukti</th><th>Tgl Dibuat</th>
           </tr>
         </thead>
-        <tbody></tbody>
+        <tbody>
+          @forelse($laporan as $l)
+            <tr>
+              <td>{{ $l->nama_lengkap }}</td>
+              <td>{{ $l->nim }}</td>
+              <td>{{ $l->kategori }}</td>
+              <td>{{ $l->detail_laporan }}</td>
+              <td>{{ $l->bukti_laporan }}</td>
+              <td>{{ $l->created_at }}</td>
+            </tr>
+          @empty
+            <tr>
+              <td colspan="6" style="text-align:center;">Tidak ada data laporan.</td>
+            </tr>
+          @endforelse
+        </tbody>
       </table>
     </div>
 
@@ -348,10 +372,24 @@
       <table id="aspirasiTable">
         <thead>
           <tr>
-            <th>Nama</th><th>NIM</th><th>Jurusan</th><th>Semester</th><th>Aspirasi</th>
+            <th>Nama</th><th>NIM</th><th>Kategori</th><th>Detail</th><th>Tgl Dibuat</th>
           </tr>
         </thead>
-        <tbody></tbody>
+        <tbody>
+          @forelse($aspirasi as $a)
+            <tr>
+              <td>{{ $a->nama_lengkap }}</td>
+              <td>{{ $a->nim }}</td>
+              <td>{{ $a->kategori }}</td>
+              <td>{{ $a->detail_aspirasi }}</td>
+              <td>{{ $a->created_at }}</td>
+            </tr>
+          @empty
+            <tr>
+              <td colspan="5" style="text-align:center;">Tidak ada data aspirasi.</td>
+            </tr>
+          @endforelse
+        </tbody>
       </table>
     </div>
   </div>
@@ -370,23 +408,7 @@
       });
     });
 
-    function loadData() {
-      const laporan = JSON.parse(localStorage.getItem('laporan')) || [];
-      const aspirasi = JSON.parse(localStorage.getItem('aspirasi')) || [];
-      document.getElementById('totalLaporan').textContent = laporan.length;
-      document.getElementById('totalAspirasi').textContent = aspirasi.length;
-
-      const laporanTable = document.querySelector('#laporanTable tbody');
-      const aspirasiTable = document.querySelector('#aspirasiTable tbody');
-      laporanTable.innerHTML = '';
-      aspirasiTable.innerHTML = '';
-      laporan.forEach(l => {
-        laporanTable.innerHTML += `<tr><td>${l.nama}</td><td>${l.nim}</td><td>${l.jurusan}</td><td>${l.semester}</td><td>${l.fasilitas}</td><td>${l.detail}</td></tr>`;
-      });
-      aspirasi.forEach(a => {
-        aspirasiTable.innerHTML += `<tr><td>${a.nama}</td><td>${a.nim}</td><td>${a.jurusan}</td><td>${a.semester}</td><td>${a.aspirasi}</td></tr>`;
-      });
-    }
+    
 
     window.onload = loadData;
   </script>
