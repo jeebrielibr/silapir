@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\SilapirController;
-use App\Http\Controllers\AuthController;
 
 Route::get('/laporan', [SilapirController::class, 'showLaporanForm'])->name('laporan.form');
 Route::post('/laporan', [SilapirController::class, 'storeLaporan'])->name('laporan.store');
