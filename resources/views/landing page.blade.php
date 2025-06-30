@@ -119,7 +119,7 @@
         <div class="feature-icon"><i class="fa-solid fa-file-alt"></i></div>
         <h5 class="fw-bold mb-2">Laporan Mahasiswa</h5>
         <p class="text-muted">Laporkan permasalahan akademik, fasilitas, atau administrasi kampus secara mudah dan cepat.</p>
-        <a href="{{ url('form-laporan') }}" class="btn btn-outline-primary">Buat Laporan</a>
+        <a href="{{ url('formLaporan') }}" class="btn btn-outline-primary">Buat Laporan</a>
       </div>
     </div>
     <div class="col-md-6">
@@ -127,7 +127,7 @@
         <div class="feature-icon"><i class="fa-solid fa-comments"></i></div>
         <h5 class="fw-bold mb-2">Aspirasi Mahasiswa</h5>
         <p class="text-muted">Sampaikan ide, kritik, dan saran untuk pengembangan kampus yang lebih baik.</p>
-        <a href="{{ url('form-aspirasi') }}" class="btn btn-outline-primary">Kirim Aspirasi</a>
+        <a href="{{ url('formAspirasi') }}" class="btn btn-outline-primary">Kirim Aspirasi</a>
       </div>
     </div>
   </div>
@@ -568,7 +568,7 @@
                 </div>
               </div><!-- End Info Item -->
 
-              <iframe src="https://www.google.com/maps/embed?pb=place/STT+Terpadu+Nurul+Fikri+-+Kampus+B/@-6.3529245,106.8300487,17z/data=!3m1!4b1!4m6!3m5!1s0x2e69ec6b07b68ea5:0x17da46bdf9308386!8m2!3d-6.3529245!4d106.8326236!16s%2Fg%2F11b60zrjkb?entry=ttu&g_ep=EgoyMDI1MDYyMy4yIKXMDSoASAFQAw%3D%3D" frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.317561852962!2d106.83004867453296!3d-6.352919162150914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ec6b07b68ea5%3A0x17da46bdf9308386!2sSTT%20Terpadu%20Nurul%20Fikri%20-%20Kampus%20B!5e0!3m2!1sid!2sid!4v1751292436358!5m2!1sid!2sid" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>
 
@@ -618,22 +618,6 @@
 
   <footer id="footer" class="footer">
 
-    <div class="footer-newsletter">
-      <div class="container">
-        <div class="row justify-content-center text-center">
-          <div class="col-lg-6">
-            <h4>Join Our Newsletter</h4>
-            <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
-            <form action="forms/newsletter.php" method="post" class="php-email-form">
-              <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your subscription request has been sent. Thank you!</div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <div class="container footer-top">
       <div class="row gy-4">
@@ -642,36 +626,33 @@
             <span class="sitename">Laporan & Aspirasi</span>
           </a>
           <div class="footer-contact pt-3">
-            <p>A108 Adam Street</p>
-            <p>New York, NY 535022</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-            <p><strong>Email:</strong> <span>info@example.com</span></p>
+            <p>Jalan Lenteng Agung Raya</p>
+            <p> Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>0217863191</span></p>
+            <p><strong>Email:</strong> <span>STTNF@gmail.com</span></p>
           </div>
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Useful Links</h4>
           <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#home">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#about">Tentang Kami</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#team">Team</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#blog">Blog</a></li>
           </ul>
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Our Services</h4>
           <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="{{ url('formLaporan') }}">Laporan</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="{{ url('formAspirasi') }}">Aspirasi</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#contact">Contact</a></li>
           </ul>
         </div>
 
         <div class="col-lg-4 col-md-12">
           <h4>Follow Us</h4>
-          <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+          <p>Mari ikuti kami di media sosial untuk mendapatkan informasi terbaru dan update dari kami.</p>
           <div class="social-links d-flex">
             <a href=""><i class="bi bi-twitter-x"></i></a>
             <a href=""><i class="bi bi-facebook"></i></a>
