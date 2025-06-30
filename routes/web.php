@@ -38,6 +38,14 @@ Route::get('/coba1', function () {
     return view('coba1');
 });
 
+Route::get('/formLaporan', function () {
+    return view('formLaporan');
+});
+
+Route::get('/formAspirasi', function () {
+    return view('formAspirasi');
+});
+
 
 
 
