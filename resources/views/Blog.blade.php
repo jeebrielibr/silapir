@@ -133,6 +133,7 @@
     <p></p>
   </div> -->
 
+<<<<<<< HEAD
   <!-- Content -->
   <div class="container my-5">
     <div class="row">
@@ -141,6 +142,120 @@
         <div class="card mb-4 post-card">
           <div class="row g-">
             <!-- Gambar -->
+=======
+    <!-- Content -->
+    <div class="container my-5">
+        <div class="row">
+            <!-- Blog Posts -->
+            <div class="col-md-8">
+                <div class="card mb-4 post-card">
+                    <div class="row g-">
+                        <!-- Gambar -->
+                        <div class="col-md-4">
+                            <img src="https://3.bp.blogspot.com/_jUAe8h_A_X4/S_zrKaC7Y1I/AAAAAAAAAB8/pYEf5TGZsDM/s1600/DSCN3764.jpg"
+                                class="img-fluid rounded-start" alt="Gambar Kursi">
+                        </div>
+                        <!-- Teks -->
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Aspirasi: Perbaikan Kursi Rusak di Ruang Kelas</h5>
+                                <p class="card-text">
+                                    Banyak mahasiswa mengusulkan perbaikan segera agar proses belajar menjadi lebih
+                                    nyaman dan aman...
+                                </p>
+                                <a href="#" class="btn btn-outline-primary">Baca Selengkapnya</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-4 post-card">
+                    <div class="row g-">
+                        <!-- Gambar -->
+                        <div class="col-md-4">
+                            <img src="https://i.pinimg.com/736x/f5/ea/e3/f5eae349e8c1366faab461e123ae31f9.jpg"class="img-fluid rounded-start" alt="Gambar Kursi">
+                        </div>
+                        <!-- Teks -->
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Aspirasi: Tambah Jam Operasional Perpustakaan</h5>
+                                <p class="card-text">
+                                    Banyak mahasiswa mengusulkan agar perpustakaan buka hingga pukul 10 malam untuk
+                                    mendukung aktivitas belajar...
+                                </p>
+                                <a href="#" class="btn btn-outline-primary">Baca Selengkapnya</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-4 post-card">
+                    <div class="row g-">
+                        <!-- Gambar -->
+                        <div class="col-md-4">
+                            <img src="https://i.pinimg.com/736x/45/42/97/4542971732d782881a97d14f0656c3fe.jpg"
+                                class="img-fluid rounded-start" alt="Gambar Toilet">
+                        </div>
+                        <!-- Teks -->
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Aspirasi: Perbaikan Fasilitas Toilet Kampus</h5>
+                                <p class="card-text">
+                                    Banyak mahasiswa meminta perbaikan serta jadwal pembersihan yang lebih rutin agar
+                                    lingkungan kampus tetap nyaman dan sehat...
+                                </p>
+                                <a href="#" class="btn btn-outline-primary">Baca Selengkapnya</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-4 post-card">
+                    <div class="row g-0">
+                        <!-- Gambar -->
+                        <div class="col-md-4">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZFJPQcHp4YKwMoK4G1fS7ABmdsrCo0N3RKg&s"
+                                class="img-fluid rounded-start" alt="Gambar Meja Rusak">
+                        </div>
+                        <!-- Teks -->
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Laporan: Terdapat Oknum Dosen</h5>
+                                <p class="card-text">
+                                    Terdapat oknum dosen yang melakukan kekerasan terhadap mahasiswi...
+                                </p>
+                                <a href="#" class="btn btn-outline-primary">Lihat Detail</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card mb-4 post-card">
+                    <div class="row g-0">
+                        <!-- Gambar -->
+                        <div class="col-md-4">
+                            <img src="https://i.pinimg.com/736x/3f/fa/cc/3ffaccc438ddca4f3fc08b9d3c58dd55.jpg"
+                                class="img-fluid rounded-start" alt="Gambar Pelanggaran Etika">
+                        </div>
+                        <!-- Teks -->
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Laporan: Mahasiswa Melakukan Pelangaran Etika Pendidikan</h5>
+                                <p class="card-text">
+                                    Terdapat beberapa oknum mahasiswa melakukan pelanggaran etika pendidikan dengan
+                                    melakukan plagiat...
+                                </p>
+                                <a href="#" class="btn btn-outline-primary">Lihat Detail</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+            <!-- Sidebar -->
+>>>>>>> ca75ad656992625ed0e525d9bb22529dcaf568fc
             <div class="col-md-4">
               <img src="https://3.bp.blogspot.com/_jUAe8h_A_X4/S_zrKaC7Y1I/AAAAAAAAAB8/pYEf5TGZsDM/s1600/DSCN3764.jpg" class="img-fluid rounded-start" alt="Gambar Kursi">
             </div>
