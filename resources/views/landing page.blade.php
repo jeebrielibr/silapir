@@ -635,18 +635,18 @@
 
         <div class="col-lg-2 col-md-3 footer-links">
           <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Tentang Kami</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Team</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Blog</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#home">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#about">Tentang Kami</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#team">Team</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#blog">Blog</a></li>
           </ul>
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
           <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Laporan</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Aspirasi</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Contact</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#report">Laporan</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#aspiration">Aspirasi</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#contact">Contact</a></li>
           </ul>
         </div>
 
