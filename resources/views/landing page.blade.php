@@ -81,19 +81,10 @@
             <p>Website ini hadir sebagai jembatan komunikasi antara mahasiswa dan pihak kampus. Kami menyediakan platform yang transparan, responsif, 
               dan mudah digunakan untuk menyampaikan laporan permasalahan serta aspirasi demi menciptakan lingkungan kampus yang lebih baik.</p>
           </div>
-         <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200">
-            <img src="{{ asset('assets/img/logo_sttnf.png') }}" 
-              class="mx-auto d-block" 
-              style="width: 400px; height: auto; animation: floating 3s ease-in-out infinite;" 
-              alt="">
+          <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200">
+            <img src="{{ asset('assets/img/gedung enep.webp') }}" class="img-fluid animated" alt="">
           </div>
-          <style>
-      @keyframes floating {
-        0% { transform: translateY(0px); }
-        50% { transform: translateY(-15px); }
-        100% { transform: translateY(0px); }
-      }
-    </style>
+        </div>
       </div>
 
     </section><!-- /Hero Section -->
@@ -128,7 +119,7 @@
         <div class="feature-icon"><i class="fa-solid fa-file-alt"></i></div>
         <h5 class="fw-bold mb-2">Laporan Mahasiswa</h5>
         <p class="text-muted">Laporkan permasalahan akademik, fasilitas, atau administrasi kampus secara mudah dan cepat.</p>
-        <a href="{{ url('formLaporan') }}" class="btn btn-outline-primary">Buat Laporan</a>
+        <a href="{{ url('form-laporan') }}" class="btn btn-outline-primary">Buat Laporan</a>
       </div>
     </div>
     <div class="col-md-6">
@@ -136,7 +127,7 @@
         <div class="feature-icon"><i class="fa-solid fa-comments"></i></div>
         <h5 class="fw-bold mb-2">Aspirasi Mahasiswa</h5>
         <p class="text-muted">Sampaikan ide, kritik, dan saran untuk pengembangan kampus yang lebih baik.</p>
-        <a href="{{ url('formAspirasi') }}" class="btn btn-outline-primary">Kirim Aspirasi</a>
+        <a href="{{ url('form-aspirasi') }}" class="btn btn-outline-primary">Kirim Aspirasi</a>
       </div>
     </div>
   </div>
