@@ -81,10 +81,19 @@
             <p>Website ini hadir sebagai jembatan komunikasi antara mahasiswa dan pihak kampus. Kami menyediakan platform yang transparan, responsif, 
               dan mudah digunakan untuk menyampaikan laporan permasalahan serta aspirasi demi menciptakan lingkungan kampus yang lebih baik.</p>
           </div>
-          <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200">
-            <img src="{{ asset('assets/img/logo_sttnf.png') }}" class="mx-auto d-block" style="width: 400px; height: auto;" alt="">
+         <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200">
+            <img src="{{ asset('assets/img/logo_sttnf.png') }}" 
+              class="mx-auto d-block" 
+              style="width: 400px; height: auto; animation: floating 3s ease-in-out infinite;" 
+              alt="">
           </div>
-        </div>
+          <style>
+      @keyframes floating {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-15px); }
+        100% { transform: translateY(0px); }
+      }
+    </style>
       </div>
 
     </section><!-- /Hero Section -->

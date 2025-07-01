@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Login Animasi</title>
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body, html {
@@ -24,8 +23,8 @@
             filter: brightness(0.7);
         }
         @keyframes zoomBg {
-            0% { transform: scale(1);}
-            100% { transform: scale(1.1);}
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
         }
         .login-container {
             z-index: 1;
@@ -41,29 +40,34 @@
                     <div class="card-body">
                         <h2 class="card-title text-center mb-2">Login</h2>
                         <p class="text-center text-secondary">Only Admin</p>
-                        <form action={{route('login')}} method="POST">
+
+                        @if(session('error'))
+                            <div class="alert alert-danger">
+                                {{ session('error') }}
+                            </div>
+                        @endif
+
+                        <form action="{{ route('login') }}" method="POST">
                             @csrf
                             <div class="mb-3">
-                                <input type="email" class="form-control" placeholder="sulton@example.com" name="email" required>
+                                <input type="email" class="form-control @error('email') is-invalid @enderror" placeholder="sulton@example.com" name="email" required value="{{ old('email') }}">
                                 @error('email')
-                                    <p>{{$message}}</p>
+                                    <div class="text-danger small mt-1">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="mb-3">
-                                <input type="password" class="form-control" placeholder="Password" name="password" required>
+                                <input type="password" class="form-control @error('password') is-invalid @enderror" placeholder="Password" name="password" required>
                                 @error('password')
-                                    <p>{{$message}}</p>
+                                    <div class="text-danger small mt-1">{{ $message }}</div>
                                 @enderror
                             </div>
                             <button type="submit" class="btn btn-primary w-100">Masuk</button>
                         </form>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
-    <!-- Bootstrap JS (optional, for interactivity) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
