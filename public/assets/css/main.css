@@ -2122,6 +2122,12 @@ section,
 .recent-blog-postst .post-item:hover .post-img img {
   transform: scale(1.1);
 }
+ .post-card {
+      transition: 0.3s;
+    }
+    .post-card:hover {
+      box-shadow: 0 0 12px rgba(0,0,0,0.15);
+    }
 
 /*--------------------------------------------------------------
 # Contact Section

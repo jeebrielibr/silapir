@@ -386,104 +386,93 @@
           <section id="blog-posts" class="blog-posts section">
 
             <div class="container" data-aos="fade-up" data-aos-delay="100">
-
+              <!-- post card -->
               <div class="row gy-4">
-
-                <div class="col-lg-6">
-                  <article>
-
-                    <div class="post-img">
-                     <img src="https://3.bp.blogspot.com/_jUAe8h_A_X4/S_zrKaC7Y1I/AAAAAAAAAB8/pYEf5TGZsDM/s1600/DSCN3764.jpg') }}"
-                      class="img-fluid rounded-start" alt="Gambar Kursi">
+                <div class="card mb-4 post-card">
+                    <div class="row g-">
+                        <!-- Gambar -->
+                        <div class="col-md-4">
+                            <img src="https://i.pinimg.com/736x/f5/ea/e3/f5eae349e8c1366faab461e123ae31f9.jpg"class="img-fluid rounded-start" alt="Gambar Kursi">
+                        </div>
+                        <!-- Teks -->
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Aspirasi: Tambah Jam Operasional Perpustakaan</h5>
+                                <p class="card-text">
+                                    Banyak mahasiswa mengusulkan agar perpustakaan buka hingga pukul 10 malam untuk
+                                    mendukung aktivitas belajar...
+                                </p>
+                                <a href="#" class="btn btn-outline-primary">Baca Selengkapnya</a>
+                            </div>
+                        </div>
                     </div>
+                </div>
 
-                    <h2 class="title">
-                      <a href="{{ url('blog-details') }}">Aspirasi: Perbaikan Kursi Rusak di Ruang Kelas</a>
-                    </h2>
-                    
-                    <div class="content">
-                      <p>Banyak mahasiswa mengusulkan perbaikan segera agar proses belajar menjadi lebih nyaman dan aman.</p>
-                      <div class="read-more">
-                        <a href="{{ url('blog-details') }}">Read More</a>
-                      </div>
+                <!-- Post Card -->
+                <div class="card mb-4 post-card">
+                    <div class="row g-">
+                        <!-- Gambar -->
+                        <div class="col-md-4">
+                            <img src="https://i.pinimg.com/736x/f5/ea/e3/f5eae349e8c1366faab461e123ae31f9.jpg"class="img-fluid rounded-start" alt="Gambar Kursi">
+                        </div>
+                        <!-- Teks -->
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Aspirasi: Tambah Jam Operasional Perpustakaan</h5>
+                                <p class="card-text">
+                                    Banyak mahasiswa mengusulkan agar perpustakaan buka hingga pukul 10 malam untuk
+                                    mendukung aktivitas belajar...
+                                </p>
+                                <a href="#" class="btn btn-outline-primary">Baca Selengkapnya</a>
+                            </div>
+                        </div>
                     </div>
+                </div>
 
-                  </article>
-                </div><!-- End post list item -->
-
-                <div class="col-lg-6">
-
-                  <article>
-
-                    <div class="post-img">
-                     <img src="{{ asset('assets/img/image.png') }}"
-                      class="img-fluid rounded-start" alt="Gambar Jam Operasional Perpustakaan">
+                <!-- Post Card -->
+                <div class="card mb-4 post-card">
+                    <div class="row g-">
+                        <!-- Gambar -->
+                        <div class="col-md-4">
+                            <img src="https://i.pinimg.com/736x/f5/ea/e3/f5eae349e8c1366faab461e123ae31f9.jpg"class="img-fluid rounded-start" alt="Gambar Kursi">
+                        </div>
+                        <!-- Teks -->
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Aspirasi: Tambah Jam Operasional Perpustakaan</h5>
+                                <p class="card-text">
+                                    Banyak mahasiswa mengusulkan agar perpustakaan buka hingga pukul 10 malam untuk
+                                    mendukung aktivitas belajar...
+                                </p>
+                                <a href="#" class="btn btn-outline-primary">Baca Selengkapnya</a>
+                            </div>
+                        </div>
                     </div>
+                </div>
 
-                    <h2 class="title">
-                      <a href="{{ url('blog-details') }}">Aspirasi: Tambah Jam Operasional Perpustakaan</a>
-                    </h2>
-                    
-                    <div class="content">
-                      <p>Banyak mahasiswa mengusulkan agar perpustakaan buka hingga pukul 10 malam untuk mendukung aktivitas belajar</p>
-                      <div class="read-more">
-                        <a href="{{ url('blog-details') }}">Read More</a>
-                      </div>
+                <!-- Post Card -->
+                <div class="card mb-4 post-card">
+                    <div class="row g-">
+                        <!-- Gambar -->
+                        <div class="col-md-4">
+                            <img src="https://i.pinimg.com/736x/f5/ea/e3/f5eae349e8c1366faab461e123ae31f9.jpg"class="img-fluid rounded-start" alt="Gambar Kursi">
+                        </div>
+                        <!-- Teks -->
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Aspirasi: Tambah Jam Operasional Perpustakaan</h5>
+                                <p class="card-text">
+                                    Banyak mahasiswa mengusulkan agar perpustakaan buka hingga pukul 10 malam untuk
+                                    mendukung aktivitas belajar...
+                                </p>
+                                <a href="#" class="btn btn-outline-primary">Baca Selengkapnya</a>
+                            </div>
+                        </div>
                     </div>
+                </div>
 
-                  </article>
-                </div><!-- End post list item -->
 
-                <div class="col-lg-6">
-
-                  <article>
-
-                    <div class="post-img">
-                     <img src="{{ asset('assets/img/toilet.jpeg') }}"
-                      class="img-fluid rounded-start" alt="Gambar Toilet">
-                    </div>
-
-                    <h2 class="title">
-                      <a href="{{ url('blog-details') }}">Aspirasi: Perbaikan Fasilitas Toilet Kampus</a>
-                    </h2>
-
-                    <div class="content">
-                      <p>
-                        Banyak mahasiswa meminta perbaikan serta jadwal pembersihan yang lebih rutin agar lingkungan kampus tetap nyaman dan sehat.</p>
-                      <div class="read-more">
-                        <a href="{{ url('blog-details') }}">Read More</a>
-                      </div>
-                    </div>
-
-                  </article>
-
-                </div><!-- End post list item -->
-
-                <div class="col-lg-6">
-
-                  <article>
-
-                    <div class="post-img">
-                      <img src="{{ asset('assets/img/plagiat.jpg') }}"
-                      class="img-fluid rounded-start" alt="Gambar Pelanggaran Etika">
-                    </div>
-
-                    <h2 class="title">
-                      <a href="{{ url('blog-details') }}">Laporan: Mahasiswa Melakukan Pelangaran Etika Pendidikan</a>
-                    </h2>
-                    
-                    <div class="content">
-                      <p>Terdapat beberapa oknum mahasiswa melakukan pelanggaran etika pendidikan dengan melakukan plagiat.</p>
-                      <div class="read-more">
-                        <a href="{{ url('blog-details') }}">Read More</a>
-                      </div>
-                    </div>
-
-                  </article>
-
-                </div><!-- End post list item -->
-
-              </div><!-- End blog posts list -->
+                
 
             </div>
 
