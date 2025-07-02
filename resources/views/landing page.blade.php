@@ -41,9 +41,9 @@
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
-      <a href="{{ url('/') }}" class="logo d-flex align-items-center me-auto">
+      <a href="{{ url('/') }}" class="logo d-flex align-items-center me-auto" style="color: #fff;">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="{{ asset('assets/img/logofinal.png') }}" alt="Logo" width="150" height="auto" class="me-2">
+        <img src="{{ asset('assets/img/logofinal.png') }}" alt="Logo" width="auto" height="150" class="me-2">
         Laporan & Aspirasi Mahasiswa
       </a>
 
@@ -82,7 +82,7 @@
               dan mudah digunakan untuk menyampaikan laporan permasalahan serta aspirasi demi menciptakan lingkungan kampus yang lebih baik.</p>
           </div>
           <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200">
-            <img src="{{ asset('assets/img/gedung enep.webp') }}" class="img-fluid animated" alt="">
+            <img src="{{ asset('assets/img/logo_sttnf.png') }}" class="img-fluid animated" style="height: 350px; margin-left: 100px;" alt="">
           </div>
         </div>
       </div>
@@ -328,7 +328,7 @@
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
             <div class="team-member d-flex align-items-start">
-              <div class="pic"><img src="{{ asset('assets/img/person/person-f-4.webp') }}" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{ asset('assets/img/jibril.jpg') }}" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Jibriel Yakışıklı</h4>
                 <span>Backend Developer</span>
@@ -336,7 +336,7 @@
                 <div class="social">
                   <a href=""><i class="bi bi-twitter-x"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href="https://www.instagram.com/jeebriel_ibr/" target="_blank"><i class="bi bi-instagram"></i></a>
                   <a href=""> <i class="bi bi-linkedin"></i> </a>
                 </div>
               </div>
