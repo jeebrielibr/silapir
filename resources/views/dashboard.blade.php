@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dashboard Admin - STT NF</title>
   <style>
     * {
@@ -78,7 +79,8 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
-    th, td {
+    th,
+    td {
       padding: 12px 16px;
       text-align: left;
       border-bottom: 1px solid #ddd;
@@ -127,22 +129,25 @@
       margin-top: 10px;
     }
 
-    .tentang-wrapper, .kontak-wrapper {
+    .tentang-wrapper,
+    .kontak-wrapper {
       background-color: #ffffffcc;
       border-radius: 20px;
       padding: 30px;
       color: #2c3e50;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       margin-top: 20px;
     }
 
-    .tentang-header h1, .kontak-wrapper h1 {
+    .tentang-header h1,
+    .kontak-wrapper h1 {
       font-size: 28px;
       margin-bottom: 10px;
       color: #2c3e50;
     }
 
-    .tentang-header p, .kontak-wrapper p {
+    .tentang-header p,
+    .kontak-wrapper p {
       font-size: 16px;
       color: #555;
     }
@@ -154,7 +159,8 @@
       margin-top: 20px;
     }
 
-    .tentang-text, .tentang-image {
+    .tentang-text,
+    .tentang-image {
       flex: 1;
       min-width: 250px;
     }
@@ -177,7 +183,7 @@
     .tentang-image img {
       width: 100%;
       border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
 
     .flowchart {
@@ -219,7 +225,7 @@
       display: flex;
       align-items: flex-start;
       gap: 15px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease;
     }
 
@@ -246,6 +252,7 @@
     }
   </style>
 </head>
+
 <body>
   <div class="sidebar">
     <h2>Dashboard</h2>
@@ -255,12 +262,12 @@
     <a class="nav-link" data-target="laporan">Laporan</a>
     <a class="nav-link" data-target="aspirasi">Aspirasi</a>
 
-   <form id="logout-form" action="{{ route('logout') }}" method="POST">
-        @csrf
-        <input type="submit" style="display: none;">
-        <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+    <form id="logout-form" action="{{ route('logout') }}" method="POST">
+      @csrf
+      <input type="submit" style="display: none;">
+      <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
     </form>
-</div>
+  </div>
 
   <div class="main">
     <div class="section active" id="home">
@@ -282,7 +289,8 @@
       <div class="tentang-wrapper">
         <div class="tentang-header">
           <h1>Tentang Sistem Kami</h1>
-          <p>Menjembatani komunikasi antara mahasiswa dan kampus untuk membangun lingkungan akademik yang lebih baik.</p>
+          <p>Menjembatani komunikasi antara mahasiswa dan kampus untuk membangun lingkungan akademik yang lebih baik.
+          </p>
         </div>
         <div class="tentang-content">
           <div class="tentang-text">
@@ -318,15 +326,24 @@
         <div class="kontak-cards">
           <div class="kontak-card">
             <div class="kontak-icon">📧</div>
-            <div><h3>Email</h3><p>info@sttnf.ac.id</p></div>
+            <div>
+              <h3>Email</h3>
+              <p>info@sttnf.ac.id</p>
+            </div>
           </div>
           <div class="kontak-card">
             <div class="kontak-icon">📞</div>
-            <div><h3>Telepon</h3><p>(021) 123456</p></div>
+            <div>
+              <h3>Telepon</h3>
+              <p>(021) 123456</p>
+            </div>
           </div>
           <div class="kontak-card">
             <div class="kontak-icon">📍</div>
-            <div><h3>Alamat</h3><p>Jl. Lenteng Agung Raya No. 20, Jakarta Selatan</p></div>
+            <div>
+              <h3>Alamat</h3>
+              <p>Jl. Lenteng Agung Raya No. 20, Jakarta Selatan</p>
+            </div>
           </div>
         </div>
       </div>
@@ -337,24 +354,35 @@
       <table id="laporanTable">
         <thead>
           <tr>
-            <th>Nama</th><th>NIM</th><th>Kategori</th><th>Detail</th><th>Bukti</th><th>Tgl Dibuat</th>
+            <th>Nama</th>
+            <th>NIM</th>
+            <th>Kategori</th>
+            <th>Detail</th>
+            <th>Bukti</th>
+            <th>Tgl Dibuat</th>
           </tr>
         </thead>
         <tbody>
           @forelse($laporan as $l)
-            <tr>
-              <td>{{ $l->nama_lengkap }}</td>
-              <td>{{ $l->nim }}</td>
-              <td>{{ $l->kategori }}</td>
-              <td>{{ $l->detail_laporan }}</td>
-              <td>{{ $l->bukti_laporan }}</td>
-              <td>{{ $l->created_at }}</td>
-            </tr>
-          @empty
-            <tr>
-              <td colspan="6" style="text-align:center;">Tidak ada data laporan.</td>
-            </tr>
-          @endforelse
+        <tr>
+        <td>{{ $l->nama_lengkap }}</td>
+        <td>{{ $l->nim }}</td>
+        <td>{{ $l->kategori }}</td>
+        <td>{{ $l->detail_laporan }}</td>
+        <td>
+          @if(!empty($l->bukti_path))
+        <a href="{{ asset('storage/' . $l->bukti_path) }}" target="_blank">Lihat Bukti</a>
+      @else
+        -
+      @endif
+        </td>
+        <td>{{ $l->created_at }}</td>
+        </tr>
+      @empty
+        <tr>
+        <td colspan="6" style="text-align:center;">Tidak ada data laporan.</td>
+        </tr>
+      @endforelse
         </tbody>
       </table>
     </div>
@@ -364,23 +392,27 @@
       <table id="aspirasiTable">
         <thead>
           <tr>
-            <th>Nama</th><th>NIM</th><th>Kategori</th><th>Detail</th><th>Tgl Dibuat</th>
+            <th>Nama</th>
+            <th>NIM</th>
+            <th>Kategori</th>
+            <th>Detail</th>
+            <th>Tgl Dibuat</th>
           </tr>
         </thead>
         <tbody>
           @forelse($aspirasi as $a)
-            <tr>
-              <td>{{ $a->nama_lengkap }}</td>
-              <td>{{ $a->nim }}</td>
-              <td>{{ $a->kategori }}</td>
-              <td>{{ $a->detail_aspirasi }}</td>
-              <td>{{ $a->created_at }}</td>
-            </tr>
-          @empty
-            <tr>
-              <td colspan="5" style="text-align:center;">Tidak ada data aspirasi.</td>
-            </tr>
-          @endforelse
+        <tr>
+        <td>{{ $a->nama_lengkap }}</td>
+        <td>{{ $a->nim }}</td>
+        <td>{{ $a->kategori }}</td>
+        <td>{{ $a->detail_aspirasi }}</td>
+        <td>{{ $a->created_at }}</td>
+        </tr>
+      @empty
+        <tr>
+        <td colspan="5" style="text-align:center;">Tidak ada data aspirasi.</td>
+        </tr>
+      @endforelse
         </tbody>
       </table>
     </div>
@@ -400,9 +432,10 @@
       });
     });
 
-    
+
 
     window.onload = loadData;
   </script>
 </body>
+
 </html>
