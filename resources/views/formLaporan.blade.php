@@ -6,12 +6,36 @@
   <title>Form Laporan Mahasiswa</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+
+  <!-- Favicons -->
+  <link href="{{ asset('assets/img/logo.png') }}" rel="icon">
+  <link href="{{ asset('assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/aos/aos.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
       font-family: 'Poppins', sans-serif;
       background: linear-gradient(135deg, #2c3e50, #3498db);
       margin: 0;
       padding: 0;
+      padding-top: 100px; /* atau sesuaikan dengan tinggi header kamu */
     }
     .navbar .nav-link {
       font-weight: 500;
@@ -94,28 +118,39 @@
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
-    <div class="container">
-      <a class="navbar-brand fw-bold text-primary d-flex align-items-center" href="beranda">
-        <img src="{{ asset('img/logo.png') }}" alt="Logo" width="40" height="40" class="me-2">
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="{{ url('/') }}" class="logo d-flex align-items-center me-auto" style="color: #fff;">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <img src="{{ asset('assets/img/logofinal.png') }}" alt="Logo" width="auto" height="150" class="me-2">
         Laporan & Aspirasi Mahasiswa
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="beranda">Beranda</a></li>
-          <li class="nav-item"><a class="nav-link" href="tentangkami">Tentang Kami</a></li>
-          <li class="nav-item"><a class="nav-link" href="blog">Blog</a></li>
-          <li class="nav-item"><a class="nav-link" href="kontak">Kontak</a></li>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="/" class="active">Home</a></li>
+          <li><a href="/#about">Tentang Kami</a></li>
+          <li><a href="/#team">Team</a></li>
+          <li><a href="/#blog">Blog</a></li>
+          <li class="dropdown"><a href="#form"><span>Kirim Aspirasi & Laporan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="{{ url('/aspirasi') }}">Aspirasi</a></li>
+              <li><a href="{{ url('/laporan') }}">Laporan</a></li>
+            </ul>
+          </li>
+          <li><a href="/ #contact">Contact</a></li>
         </ul>
-      </div>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="{{ url('login') }}">Login Admin</a>
+
     </div>
-  </nav>
+  </header>
 
   <!-- Form Section -->
-  <div class="form-container">
+  <div class="form-container mt-5">
     <h2>Laporan</h2>
     <p class="keterangan-form">Form ini bertujuan untuk menampung laporan mahasiswa terkait permasalahan fasilitas, layanan, atau lingkungan kampus agar dapat segera ditindaklanjuti.</p>
     @if ($errors->any())
@@ -156,7 +191,7 @@
   </div>
 
   <!-- FAQ Section -->
-  <section class="py-5" style="background: linear-gradient(135deg, #2c3e50, #34495e); color: #fff;">
+  <section class="py-5" style="background: linear-gradient( #34495e); color: #fff;">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-10">
