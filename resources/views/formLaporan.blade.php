@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Form Laporan Mahasiswa</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
 
   <!-- Favicons -->
@@ -191,7 +190,7 @@
   </div>
 
   <!-- FAQ Section -->
-  <section class="py-5" style="background: linear-gradient( #34495e); color: #fff;">
+  <section class="py-5" style="background: linear-gradient(135deg, #2c3e50, #3498db); color: #fff;">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-10">
