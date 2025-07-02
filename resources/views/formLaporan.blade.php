@@ -137,8 +137,7 @@
 
             <a href="{{ url('/') }}" class="logo d-flex align-items-center me-auto" style="color: #fff;">
                 <!-- Uncomment the line below if you also wish to use an image logo -->
-                <img src="{{ asset('assets/img/logofinal.png') }}" alt="Logo" width="auto" height="150"
-                    class="me-2">
+                <img src="{{ asset('assets/img/logofinal.png') }}" alt="Logo" width="auto" height="150" class="me-2">
                 Laporan & Aspirasi Mahasiswa
             </a>
 
@@ -209,7 +208,7 @@
     </div>
 
     <!-- FAQ Section -->
-    <section class="py-5" style="background: linear-gradient(135deg, #2c3e50, #3498db); color: #fff;">
+    <section class="py-5" style="background: transparent; color: #fff;">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-10">
@@ -223,8 +222,7 @@
                                         Apakah identitas pelapor akan dirahasiakan?
                                     </button>
                                 </h2>
-                                <div id="faq1" class="accordion-collapse collapse"
-                                    data-bs-parent="#faqAccordion">
+                                <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                     <div class="accordion-body">Ya, semua laporan yang masuk bersifat rahasia dan hanya
                                         dapat diakses oleh pihak berwenang.</div>
                                 </div>
@@ -236,8 +234,7 @@
                                         Bagaimana cara melaporkan?
                                     </button>
                                 </h2>
-                                <div id="faq2" class="accordion-collapse collapse"
-                                    data-bs-parent="#faqAccordion">
+                                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                     <div class="accordion-body">Kamu bisa melaporkan langsung di laporan asprasi</div>
                                 </div>
                             </div>
@@ -248,8 +245,7 @@
                                         Berapa lama laporan akan ditindaklanjuti?
                                     </button>
                                 </h2>
-                                <div id="faq3" class="accordion-collapse collapse"
-                                    data-bs-parent="#faqAccordion">
+                                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                     <div class="accordion-body">Paling lambat dalam 3 hari kerja, laporan akan direspon
                                         oleh pihak kampus.</div>
                                 </div>
@@ -261,8 +257,7 @@
                                         Apakah bisa melaporkan tanpa nama?
                                     </button>
                                 </h2>
-                                <div id="faq4" class="accordion-collapse collapse"
-                                    data-bs-parent="#faqAccordion">
+                                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                     <div class="accordion-body">Ya, kamu dapat memilih untuk anonim saat mengisi form,
                                         namun akan lebih baik jika identitas disertakan untuk verifikasi.</div>
                                 </div>

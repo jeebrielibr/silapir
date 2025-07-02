@@ -40,8 +40,7 @@
 
             <a href="{{ url('/') }}" class="logo d-flex align-items-center me-auto " style="color: #fff;">
                 <!-- Uncomment the line below if you also wish to use an image logo -->
-                <img src="{{ asset('assets/img/logofinal.png') }}" alt="Logo" width="auto" height="150"
-                    class="me-2">
+                <img src="{{ asset('assets/img/logofinal.png') }}" alt="Logo" width="auto" height="150" class="me-2">
                 Laporan & Aspirasi Mahasiswa
             </a>
 
@@ -181,8 +180,7 @@
                             mahasiswa sampai
                             ke tujuan yang tepat.
                         </p>
-                        <a href="#" class="read-more"><span>Read More</span><i
-                                class="bi bi-arrow-right"></i></a>
+                        <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
                     </div>
 
                 </div>
@@ -257,8 +255,8 @@
                     </div>
 
                     <div class="col-lg-5 order-1 order-lg-2 why-us-img">
-                        <img src="{{ asset('assets/img/why-us.png') }}" class="img-fluid" alt=""
-                            data-aos="zoom-in" data-aos-delay="100">
+                        <img src="{{ asset('assets/img/why-us.png') }}" class="img-fluid" alt="" data-aos="zoom-in"
+                            data-aos-delay="100">
                     </div>
                 </div>
             </div>
@@ -278,8 +276,8 @@
 
                     <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
                         <div class="team-member d-flex align-items-start">
-                            <div class="pic"><img src="{{ asset('assets/img/pacriii.png') }}" class="img-fluid"
-                                    alt=""></div>
+                            <div class="pic"><img src="{{ asset('assets/img/pacriii.png') }}" class="img-fluid" alt="">
+                            </div>
                             <div class="member-info">
                                 <h4>Pacri El-Kaciwi</h4>
                                 <span>Frontend Developer</span>
@@ -300,8 +298,8 @@
 
                     <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
                         <div class="team-member d-flex align-items-start">
-                            <div class="pic"><img src="{{ asset('assets/img/prass.jpg') }}" class="img-fluid"
-                                    alt=""></div>
+                            <div class="pic"><img src="{{ asset('assets/img/prass.jpg') }}" class="img-fluid" alt="">
+                            </div>
                             <div class="member-info">
                                 <h4>Prass si Mulyo</h4>
                                 <span>Frontend Developer</span>
@@ -320,8 +318,8 @@
 
                     <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
                         <div class="team-member d-flex align-items-start">
-                            <div class="pic"><img src="{{ asset('assets/img/anisa.jpg') }}" class="img-fluid"
-                                    alt=""></div>
+                            <div class="pic"><img src="{{ asset('assets/img/anisa.jpg') }}" class="img-fluid" alt="">
+                            </div>
                             <div class="member-info">
                                 <h4>Annisa Fitrianiw</h4>
                                 <span>Frontend Developer</span>
@@ -339,8 +337,8 @@
 
                     <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
                         <div class="team-member d-flex align-items-start">
-                            <div class="pic"><img src="{{ asset('assets/img/uton.jpg') }}" class="img-fluid"
-                                    alt=""></div>
+                            <div class="pic"><img src="{{ asset('assets/img/uton.jpg') }}" class="img-fluid" alt="">
+                            </div>
                             <div class="member-info">
                                 <h4>Uton</h4>
                                 <span>Backend Developer</span>
@@ -360,8 +358,8 @@
 
                     <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
                         <div class="team-member d-flex align-items-start">
-                            <div class="pic"><img src="{{ asset('assets/img/jibril.jpg') }}" class="img-fluid"
-                                    alt=""></div>
+                            <div class="pic"><img src="{{ asset('assets/img/jibril.jpg') }}" class="img-fluid" alt="">
+                            </div>
                             <div class="member-info">
                                 <h4>Jibriel</h4>
                                 <span>Backend Developer</span>
@@ -379,8 +377,8 @@
 
                     <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
                         <div class="team-member d-flex align-items-start">
-                            <div class="pic"><img src="{{ asset('assets/img/solihin.png') }}" class="img-fluid"
-                                    alt=""></div>
+                            <div class="pic"><img src="{{ asset('assets/img/solihin.png') }}" class="img-fluid" alt="">
+                            </div>
                             <div class="member-info">
                                 <h4>Ihiiin</h4>
                                 <span>Backend Developer</span>
@@ -633,20 +631,19 @@
 
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d350.48785274979986!2d106.8325597854196!3d-6.352950999765276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ec3b09acb7a9%3A0x412b15e3062750ef!2sKantor%20Pusat%20PPSDMS%20Nurul%20Fikri!5e0!3m2!1sen!2sid!4v1751462219973!5m2!1sen!2sid"
-                                    width="400" height="300" style="border:0;" allowfullscreen=""
-                                    loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </div>
 
                         <div class="col-lg-7">
-                            <form action="forms/contact.php" method="post" class="php-email-form"
-                                data-aos="fade-up" data-aos-delay="200">
+                            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
+                                data-aos-delay="200">
                                 <div class="row gy-4">
 
                                     <div class="col-md-6">
                                         <label for="name-field" class="pb-2">Your Name</label>
-                                        <input type="text" name="name" id="name-field" class="form-control"
-                                            required="">
+                                        <input type="text" name="name" id="name-field" class="form-control" required="">
                                     </div>
 
                                     <div class="col-md-6">
@@ -663,7 +660,8 @@
 
                                     <div class="col-md-12">
                                         <label for="message-field" class="pb-2">Message</label>
-                                        <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
+                                        <textarea class="form-control" name="message" rows="10" id="message-field"
+                                            required=""></textarea>
                                     </div>
 
                                     <div class="col-md-12 text-center">
