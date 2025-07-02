@@ -50,7 +50,7 @@
           <li><a href="#about">Tentang Kami</a></li>
           <li><a href="#team">Team</a></li>
           <li><a href="#blog">Blog</a></li>
-          <li class="dropdown"><a href="#"><span>Kirim Aspirasi & Laporan</span> <i
+          <li class="dropdown"><a href="#form"><span>Kirim Aspirasi & Laporan</span> <i
                 class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="{{ url('/aspirasi') }}">Aspirasi</a></li>
