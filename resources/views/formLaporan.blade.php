@@ -144,7 +144,7 @@
 
             <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li><a href="/" class="active">Home</a></li>
+                    <li><a href="/">Home</a></li>
                     <li class="dropdown"><a href="#form"><span>Kirim Laporan & Aspirasi</span> <i
                                 class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
