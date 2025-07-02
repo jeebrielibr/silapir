@@ -48,11 +48,11 @@
             <nav id="navmenu" class="navmenu">
                 <ul>
                     <li><a href="#hero" class="active">Home</a></li>
-                    <li class="dropdown"><a href="#form"><span>Kirim Aspirasi & Laporan</span> <i
+                    <li class="dropdown"><a href="#form"><span>Kirim Laporan & Aspirasi</span> <i
                                 class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
-                            <li><a href="{{ url('/aspirasi') }}">Aspirasi</a></li>
                             <li><a href="{{ url('/laporan') }}">Laporan</a></li>
+                            <li><a href="{{ url('/aspirasi') }}">Aspirasi</a></li>
                         </ul>
                     </li>
                     <li><a href="#about">Tentang Kami</a></li>
@@ -382,9 +382,9 @@
                             <div class="pic"><img src="{{ asset('assets/img/solihin.png') }}" class="img-fluid"
                                     alt=""></div>
                             <div class="member-info">
-                                <h4>Habibi Solih</h4>
-                                <span>Backend</span>
-                                <p>"Dolorum tempora officiis odit laborum officiis et et accusamus"</p>
+                                <h4>Ihiiin</h4>
+                                <span>Backend Developer</span>
+                                <p>"per aspira ad astra"</p>
                                 <div class="social">
                                     <a href=""><i class="bi bi-twitter-x"></i></a>
                                     <a href=""><i class="bi bi-facebook"></i></a>
@@ -627,7 +627,7 @@
                                     <i class="bi bi-envelope flex-shrink-0"></i>
                                     <div>
                                         <h3>Email</h3>
-                                        <p>kaciw@nurulfikri.ac.id</p>
+                                        <p>silapir@nurulfikri.ac.id</p>
                                     </div>
                                 </div><!-- End Info Item -->
 
@@ -693,11 +693,12 @@
                         <p>Jalan Lenteng Agung Raya</p>
                         <p>Kota Jakarta Selatan</p>
                         <p class="mt-3"><strong>Phone:</strong> <span>+62 896-3728-6141</span></p>
-                        <p><strong>Email:</strong> <span>kaciw@nurulfikri.ac.id</span></p>
+                        <p><strong>Email:</strong> <span>silapir@nurulfikri.ac.id</span></p>
                     </div>
                 </div>
 
                 <div class="col-lg-2 col-md-3 footer-links">
+                    <h4>Useful Links</h4>
                     <ul>
                         <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
                         <li><i class="bi bi-chevron-right"></i> <a href="{{ url('/laporan') }}">Laporan</a></li>
@@ -707,6 +708,7 @@
                 </div>
 
                 <div class="col-lg-2 col-md-3 footer-links">
+                    <h4>Other Links</h4>
                     <ul>
                         <li><i class="bi bi-chevron-right"></i> <a href="#team">Team</a></li>
                         <li><i class="bi bi-chevron-right"></i> <a href="#blog">Blog</a></li>
@@ -717,7 +719,7 @@
 
                 <div class="col-lg-4 col-md-12">
                     <h4>Follow Us</h4>
-                    <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+                    <p>Mari ikuti kami di media sosial untuk mendapatkan informasi terbaru.</p>
                     <div class="social-links d-flex">
                         <a href=""><i class="bi bi-twitter-x"></i></a>
                         <a href=""><i class="bi bi-facebook"></i></a>
