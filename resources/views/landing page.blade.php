@@ -41,9 +41,9 @@
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
-      <a href="{{ url('/') }}" class="logo d-flex align-items-center me-auto" style="color: #fff;">
+      <a href="{{ url('/') }}" class="logo d-flex align-items-center me-auto">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="{{ asset('assets/img/logofinal.png') }}" alt="Logo" height="150" width="auto" class="me-2">
+        <img src="{{ asset('assets/img/laa.png') }}" alt="Logo" width="60" height="" class="me-2">
         Laporan & Aspirasi Mahasiswa
       </a>
 
@@ -260,16 +260,16 @@
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <div class="team-member d-flex align-items-start">
-              <div class="pic"><img src="{{ asset('assets/img/person/person-m-7.webp') }}" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{ asset('assets/img/pacriii.png') }}" class="img-fluid"  alt=""></div>
               <div class="member-info">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
-                <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
+                <h4>Pacri El-Kaciwi</h4>
+                <span>Frontend Developer</span>
+                <p>"Katanya cinta itu butuh komitmen, tapi aku aja commit tiap hari di GitHub."</p>
                 <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""> <i class="bi bi-linkedin"></i> </a>
+                  <a href="https://x.com/FachriFadi22604" target="_blank"><i class="bi bi-twitter-x"></i></a>
+                  <a href="https://www.facebook.com/profile.php?id=100085817881317&locale=id_ID" target="_blank"><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.instagram.com/aii.fachri/" target="_blank"><i class="bi bi-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/fachri-fadilah-8b17a032b/" target="_blank"> <i class="bi bi-linkedin"></i> </a>
                 </div>
               </div>
             </div>
@@ -277,16 +277,16 @@
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <div class="team-member d-flex align-items-start">
-              <div class="pic"><img src="{{ asset('assets/img/person/person-f-8.webp') }}" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{ asset('assets/img/prass.jpg') }}" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Sarah Jhonson</h4>
-                <span>Product Manager</span>
-                <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
+                <h4>Prass si Mulyo</h4>
+                <span>Frontend Developer</span>
+                <p>"Katanya cinta butuh tampilan yang indah, tenang... aku frontend."</p>
                 <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""> <i class="bi bi-linkedin"></i> </a>
+                  <a href="#"><i class="bi bi-twitter-x"></i></a>
+                  <a href="#"><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.instagram.com/prz_mkez/" target="_blank"><i class="bi bi-instagram"></i></a>
+                  <a href="https://id.linkedin.com/in/prasetya-mulya-05993032b" target="_blank"> <i class="bi bi-linkedin"></i> </a>
                 </div>
               </div>
             </div>
@@ -294,11 +294,45 @@
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
             <div class="team-member d-flex align-items-start">
-              <div class="pic"><img src="{{ asset('assets/img/person/person-m-6.webp') }}" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{ asset('assets/img/anisa.jpg') }}" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>William Anderson</h4>
-                <span>CTO</span>
-                <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
+                <h4>Annisa Fitrianiw</h4>
+                <span>Frontend Developer</span>
+                <p>"Kamu kayak CSS di hidupku, bikin semuanya terlihat lebih rapi dan bermakna."</p>
+                <div class="social">
+                  <a href="#"><i class="bi bi-twitter-x"></i></a>
+                  <a href="#"><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.instagram.com/ansftyani/" target="_blank"><i class="bi bi-instagram"></i></a>
+                  <a href="#"> <i class="bi bi-linkedin"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="team-member d-flex align-items-start">
+              <div class="pic"><img src="{{ asset('assets/img/uton.jpg') }}" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Uton</h4>
+                <span>Backend Developer</span>
+                <p>"Aku backend developer, bukan dukun… tapi bisa bikin hubungan kita stabil lewat sistem yang solid."</p>
+                <div class="social">
+                  <a href="#"><i class="bi bi-twitter-x"></i></a>
+                  <a href="#"><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.instagram.com/ahmdsulthnn/" target="_blank"><i class="bi bi-instagram"></i></a>
+                  <a href="#"> <i class="bi bi-linkedin"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="team-member d-flex align-items-start">
+              <div class="pic"><img src="{{ asset('assets/img/person/person-f-4.webp') }}" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Jibriel Yakışıklı</h4>
+                <span>Backend Developer</span>
+                <p>"Kamu itu seperti parameter wajib di function hidupku — tanpa kamu, semua error."</p>
                 <div class="social">
                   <a href=""><i class="bi bi-twitter-x"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -311,16 +345,16 @@
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
             <div class="team-member d-flex align-items-start">
-              <div class="pic"><img src="{{ asset('assets/img/person/person-f-4.webp') }}" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{ asset('assets/img/solihin.png') }}" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Amanda Jepson</h4>
-                <span>Accountant</span>
+                <h4>Habibi Solih</h4>
+                <span>Backend</span>
                 <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
                 <div class="social">
                   <a href=""><i class="bi bi-twitter-x"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""> <i class="bi bi-linkedin"></i> </a>
+                  <a href="https://www.instagram.com/slhn.99/" target="_blank"><i class="bi bi-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/muhamad-solihin-9933as56 " target="_blank"> <i class="bi bi-linkedin"></i> </a>
                 </div>
               </div>
             </div>

@@ -220,7 +220,7 @@
     Swal.fire({
       icon: 'success',
       title: 'Terima kasih!',
-      text: '{{ session('success') }}',
+      text: "{{ session('success') }}",
       confirmButtonText: 'Tutup'
     });
   </script>
