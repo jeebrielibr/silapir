@@ -22,8 +22,8 @@ class SilapirController extends Controller
             'nama_lengkap' => 'required|string|max:100',
             'nim' => 'required|numeric|digits:10',
             'kategori' => 'required|in:fasilitas,jaringan_wifi,kekerasan_bullying',
-            'detail_laporan' => 'required|string|min:20',
-            'bukti_laporan' => 'nullable|file|mimes:jpg,jpeg,png,pdf|max:2048'
+            'detail_laporan' => 'required|string|min:10',
+            'bukti_laporan' => 'nullable|file|mimes:jpg,jpeg,png,pdf|max:10240'
         ]);
 
         $laporan = new Laporan();
@@ -56,7 +56,7 @@ class SilapirController extends Controller
             'nama_lengkap' => 'required|string|max:100',
             'nim' => 'required|numeric|digits:10',
             'kategori' => 'required|in:fasilitas_kampus,kegiatan_mahasiswa,pengembangan_akademik',
-            'detail_aspirasi' => 'required|string|min:20'
+            'detail_aspirasi' => 'required|string|min:10'
         ]);
 
         Aspirasi::create($validated);
