@@ -392,7 +392,7 @@
                     <div class="row g-">
                         <!-- Gambar -->
                         <div class="col-md-4">
-                            <img src="https://i.pinimg.com/736x/f5/ea/e3/f5eae349e8c1366faab461e123ae31f9.jpg"class="img-fluid rounded-start" alt="Gambar Kursi">
+                            <img src="{{ asset('assets/img/perpustakaan.webp') }}"class="img-fluid rounded-start" alt="Gambar Kursi">
                         </div>
                         <!-- Teks -->
                         <div class="col-md-8">
@@ -413,15 +413,15 @@
                     <div class="row g-">
                         <!-- Gambar -->
                         <div class="col-md-4">
-                            <img src="https://i.pinimg.com/736x/f5/ea/e3/f5eae349e8c1366faab461e123ae31f9.jpg"class="img-fluid rounded-start" alt="Gambar Kursi">
+                            <img src="{{ asset('assets/img/kursi rusak.webp') }}"class="img-fluid rounded-start" alt="Gambar Kursi">
                         </div>
                         <!-- Teks -->
                         <div class="col-md-8">
                             <div class="card-body">
-                                <h5 class="card-title">Aspirasi: Tambah Jam Operasional Perpustakaan</h5>
+                                <h5 class="card-title">Aspirasi: Kursi Rusak</h5>
                                 <p class="card-text">
-                                    Banyak mahasiswa mengusulkan agar perpustakaan buka hingga pukul 10 malam untuk
-                                    mendukung aktivitas belajar...
+                                    Banyak mahasiswa mengusulkan agar kursi di perpustakaan diperbaiki atau diganti
+                                    untuk mendukung kenyamanan belajar.
                                 </p>
                                 <a href="#" class="btn btn-outline-primary">Baca Selengkapnya</a>
                             </div>
@@ -434,15 +434,14 @@
                     <div class="row g-">
                         <!-- Gambar -->
                         <div class="col-md-4">
-                            <img src="https://i.pinimg.com/736x/f5/ea/e3/f5eae349e8c1366faab461e123ae31f9.jpg"class="img-fluid rounded-start" alt="Gambar Kursi">
+                            <img src="{{ asset('assets/img/Toilet rusak.webp') }}"class="img-fluid rounded-start" alt="Gambar Kursi">
                         </div>
                         <!-- Teks -->
                         <div class="col-md-8">
                             <div class="card-body">
-                                <h5 class="card-title">Aspirasi: Tambah Jam Operasional Perpustakaan</h5>
+                                <h5 class="card-title">Aspirasi: Toilet Rusak</h5>
                                 <p class="card-text">
-                                    Banyak mahasiswa mengusulkan agar perpustakaan buka hingga pukul 10 malam untuk
-                                    mendukung aktivitas belajar...
+                                    Banyak mahasiswa mengusulkan untuk memperbaiki toilet yang rusak
                                 </p>
                                 <a href="#" class="btn btn-outline-primary">Baca Selengkapnya</a>
                             </div>
@@ -455,15 +454,14 @@
                     <div class="row g-">
                         <!-- Gambar -->
                         <div class="col-md-4">
-                            <img src="https://i.pinimg.com/736x/f5/ea/e3/f5eae349e8c1366faab461e123ae31f9.jpg"class="img-fluid rounded-start" alt="Gambar Kursi">
+                            <img src="{{ asset('assets/img/poster.webp') }}"class="img-fluid rounded-start" alt="Gambar Kursi">
                         </div>
                         <!-- Teks -->
                         <div class="col-md-8">
                             <div class="card-body">
-                                <h5 class="card-title">Aspirasi: Tambah Jam Operasional Perpustakaan</h5>
+                                <h5 class="card-title">Laporan: Oknum</h5>
                                 <p class="card-text">
-                                    Banyak mahasiswa mengusulkan agar perpustakaan buka hingga pukul 10 malam untuk
-                                    mendukung aktivitas belajar...
+                                    Banyak mahasiswa yang Melapor Terdapat Oknum yang melakukan kekerasan
                                 </p>
                                 <a href="#" class="btn btn-outline-primary">Baca Selengkapnya</a>
                             </div>
