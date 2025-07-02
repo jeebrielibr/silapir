@@ -21,33 +21,12 @@ Route::get('/beranda', function () {
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [App\Http\Controllers\SilapirController::class, 'index'])->name('dashboard');
 });
-Route::get('/tentangkami', function () {
-    return view('tentangkami');
-});
-Route::get('/blog', function () {
-    return view('blog');
-});
-Route::get('/kontak', function () {
-    return view('kontak');
-});
-
-Route::get('/coba', function () {
-    return view('coba');
-});
-Route::get('/coba1', function () {
-    return view('coba1');
-});
-
 Route::get('/formLaporan', function () {
     return view('formLaporan');
 });
-
 Route::get('/formAspirasi', function () {
     return view('formAspirasi');
 });
-
-
-
 
 Route::middleware('guest')->group(function () {
     Route::get('/login', function () {
