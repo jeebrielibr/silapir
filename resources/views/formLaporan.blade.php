@@ -129,7 +129,7 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="/" class="active">Home</a></li>
-          <li class="dropdown"><a href="#form"><span>Kirim Aspirasi & Laporan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li class="dropdown"><a href="/#form"><span>Kirim Aspirasi & Laporan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="{{ url('/aspirasi') }}">Aspirasi</a></li>
               <li><a href="{{ url('/laporan') }}">Laporan</a></li>
