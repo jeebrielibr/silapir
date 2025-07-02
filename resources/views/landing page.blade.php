@@ -43,7 +43,7 @@
 
       <a href="{{ url('/') }}" class="logo d-flex align-items-center me-auto">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="{{ asset('assets/img/logo.png') }}" alt="Logo" width="40" height="40" class="me-2">
+        <img src="{{ asset('assets/img/laa.png') }}" alt="Logo" width="60" height="" class="me-2">
         Laporan & Aspirasi Mahasiswa
       </a>
 

@@ -14,22 +14,22 @@
       padding: 0;
     }
     .navbar {
-      background-color: #ffffff !important;
+      background-color: #37517e;
     }
     .navbar .navbar-brand {
-      color: #4e54c8 !important;
+      color: #47b2e4 !important;
       font-weight: 700;
     }
     .navbar .nav-link {
       font-weight: 500;
-      color: #4e54c8 !important;
+      color: #ffffff  !important;
       background-color: transparent;
       border-radius: 8px;
       transition: background-color 0.3s ease, color 0.3s ease;
     }
     .navbar .nav-link:hover,
     .navbar .nav-link:focus {
-      background-color: #4e54c8;
+      background-color: #47b2e4;
       color: #ffffff !important;
     }
     .form-container {
@@ -94,7 +94,7 @@
   <nav class="navbar navbar-expand-lg navbar-light shadow-sm sticky-top">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="beranda">
-        <img src="{{ asset('img/logo.png') }}" alt="Logo" width="40" height="40" class="me-2">
+        <img src="{{ asset('assets/img/laa.png') }}" alt="Logo" width="40" height="40" class="me-2">
         Laporan & Aspirasi Mahasiswa
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
