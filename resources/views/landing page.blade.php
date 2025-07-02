@@ -41,9 +41,9 @@
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
-      <a href="{{ url('/') }}" class="logo d-flex align-items-center me-auto">
+      <a href="{{ url('/') }}" class="logo d-flex align-items-center me-auto" style="color: #fff;">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="{{ asset('assets/img/laa.png') }}" alt="Logo" width="60" height="" class="me-2">
+        <img src="{{ asset('assets/img/logofinal.png') }}" alt="Logo" height="150" width="auto" class="me-2">
         Laporan & Aspirasi Mahasiswa
       </a>
 
