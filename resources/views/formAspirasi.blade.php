@@ -144,9 +144,6 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="/" class="active">Home</a></li>
-          <li><a href="/#about">Tentang Kami</a></li>
-          <li><a href="/#team">Team</a></li>
-          <li><a href="/#blog">Blog</a></li>
           <li class="dropdown"><a href="#form"><span>Kirim Aspirasi & Laporan</span> <i
                 class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
@@ -154,6 +151,9 @@
               <li><a href="{{ url('/laporan') }}">Laporan</a></li>
             </ul>
           </li>
+          <li><a href="/#about">Tentang Kami</a></li>
+          <li><a href="/#team">Team</a></li>
+          <li><a href="/#blog">Blog</a></li>
           <li><a href="/ #contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
