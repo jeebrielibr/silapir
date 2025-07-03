@@ -194,7 +194,7 @@
             <label for="kategori">Kategori</label>
             <select id="kategori" name="kategori" required>
                 <option value="" disabled selected>Pilih Kategori</option>
-                <option value="fasilitas">Laporan Fasilitas</option>
+                <option value="fasilitas_kampus">Laporan Fasilitas</option>
                 <option value="jaringan_wifi">Gangguan Jaringan Internet / WiFi</option>
                 <option value="kekerasan_bullying">Kekerasan / Bullying</option>
             </select>
@@ -222,7 +222,7 @@
                                         Apakah identitas pelapor akan dirahasiakan?
                                     </button>
                                 </h2>
-                                <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                 <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                     <div class="accordion-body">Ya, semua laporan yang masuk bersifat rahasia dan hanya
                                         dapat diakses oleh pihak berwenang.</div>
                                 </div>

@@ -21,7 +21,7 @@ class SilapirController extends Controller
         $validated = $request->validate([
             'nama_lengkap' => 'required|string|max:100',
             'nim' => 'required|numeric|digits:10',
-            'kategori' => 'required|in:fasilitas,jaringan_wifi,kekerasan_bullying',
+            'kategori' => 'required|in:fasilitas_kampus,jaringan_wifi,kekerasan_bullying',
             'detail_laporan' => 'required|string|min:10',
             'bukti_laporan' => 'nullable|file|mimes:jpg,jpeg,png,pdf|max:10240'
         ]);
@@ -71,6 +71,22 @@ class SilapirController extends Controller
         $laporan = \App\Models\Laporan::all();
         $aspirasi = \App\Models\Aspirasi::all();
         return view('dashboard', compact('totalLaporan', 'totalAspirasi', 'laporan', 'aspirasi'));
+    }
+
+    public function destroyAspirasi($id)
+    {
+        $aspirasi = \App\Models\Aspirasi::findOrFail($id);
+        $aspirasi->delete();
+
+        // Untuk AJAX, return response JSON
+        return response()->json(['success' => true]);
+    }
+
+    public function destroyLaporan($id)
+    {
+        $laporan = \App\Models\Laporan::findOrFail($id);
+        $laporan->delete();
+        return response()->json(['success' => true]);
     }
 }
 

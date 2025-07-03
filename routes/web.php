@@ -57,3 +57,6 @@ Route::middleware('guest')->group(function () {
 });
 
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+Route::delete('/aspirasi/{id}', [\App\Http\Controllers\SilapirController::class, 'destroyAspirasi'])->name('aspirasi.destroy');
+Route::delete('/laporan/{id}', [\App\Http\Controllers\SilapirController::class, 'destroyLaporan'])->name('laporan.destroy');

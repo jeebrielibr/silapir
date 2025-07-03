@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nama_lengkap');
             $table->string('nim', 10);
-            $table->enum('kategori', ['fasilitas', 'jaringan_wifi', 'kekerasan_bullying']);
+            $table->enum('kategori', ['fasilitas_kampus', 'jaringan_wifi', 'kekerasan_bullying']);
             $table->text('detail_laporan');
             $table->string('bukti_path')->nullable();
             $table->timestamps();
