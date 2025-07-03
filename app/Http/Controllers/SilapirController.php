@@ -33,8 +33,8 @@ class SilapirController extends Controller
         $laporan->detail_laporan = $validated['detail_laporan'];
 
         if ($request->hasFile('bukti_laporan')) {
-            $path = $request->file('bukti_laporan')->store('public/bukti_laporan');
-            $laporan->bukti_path = str_replace('public/', '', $path);
+            $path = $request->file('bukti_laporan')->move(public_path('bukti_laporan'), uniqid().'_'.$request->file('bukti_laporan')->getClientOriginalName());
+            $laporan->bukti_path = 'bukti_laporan/' . basename($path);
         }
 
         //dd(\DB::connection()->getDatabaseName());

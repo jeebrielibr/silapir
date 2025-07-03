@@ -371,10 +371,10 @@
         <td>{{ $l->detail_laporan }}</td>
         <td>
           @if(!empty($l->bukti_path))
-        <a href="{{ asset('storage/' . $l->bukti_path) }}" target="_blank">Lihat Bukti</a>
-      @else
-        -
-      @endif
+            <a href="{{ asset($l->bukti_path) }}" target="_blank">Lihat Bukti</a>
+          @else
+            -
+          @endif
         </td>
         <td>{{ $l->created_at }}</td>
         </tr>
