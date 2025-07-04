@@ -21,34 +21,13 @@ Route::get('/beranda', function () {
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [App\Http\Controllers\SilapirController::class, 'index'])->name('dashboard');
 });
-Route::get('/tentangkami', function () {
-    return view('tentangkami');
-});
-Route::get('/blog', function () {
-    return view('blog');
-});
-Route::get('/kontak', function () {
-    return view('kontak');
-});
-
-Route::get('/coba', function () {
-    return view('coba');
-});
-Route::get('/coba1', function () {
-    return view('coba1');
-});
-
 Route::get('/formLaporan', function () {
     return view('formLaporan');
 });
-
 Route::get('/formAspirasi', function () {
     return view('formAspirasi');
 });
 
-
-
-
 Route::middleware('guest')->group(function () {
     Route::get('/login', function () {
         return view('login');
@@ -78,3 +57,6 @@ Route::middleware('guest')->group(function () {
 });
 
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+Route::delete('/aspirasi/{id}', [\App\Http\Controllers\SilapirController::class, 'destroyAspirasi'])->name('aspirasi.destroy');
+Route::delete('/laporan/{id}', [\App\Http\Controllers\SilapirController::class, 'destroyLaporan'])->name('laporan.destroy');

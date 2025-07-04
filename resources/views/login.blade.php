@@ -39,7 +39,7 @@
                 <div class="card login-container shadow-lg">
                     <div class="card-body">
                         <h2 class="card-title text-center mb-2">Login</h2>
-                        <p class="text-center text-secondary">Only Admin</p>
+                        <p class="text-center text-secondary">Hanya Untuk Admin</p>
 
                         @if(session('error'))
                             <div class="alert alert-danger">
@@ -50,7 +50,7 @@
                         <form action="{{ route('login') }}" method="POST">
                             @csrf
                             <div class="mb-3">
-                                <input type="email" class="form-control @error('email') is-invalid @enderror" placeholder="sulton@example.com" name="email" required value="{{ old('email') }}">
+                                <input type="email" class="form-control @error('email') is-invalid @enderror" placeholder="silapir@example.com" name="email" required value="{{ old('email') }}">
                                 @error('email')
                                     <div class="text-danger small mt-1">{{ $message }}</div>
                                 @enderror
@@ -67,6 +67,14 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div style="position: fixed; top: 20px; left: 20px; z-index: 2;">
+        <a href="{{ url('/') }}" class="btn btn-outline-light btn-sm d-flex align-items-center gap-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+                <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 2 7.5V14a1 1 0 0 0 1 1h3.5a.5.5 0 0 0 .5-.5V11h2v3.5a.5.5 0 0 0 .5.5H13a1 1 0 0 0 1-1V7.5a.5.5 0 0 0-.146-.354l-6-6zM13 14H9.5V11a.5.5 0 0 0-.5-.5h-2A.5.5 0 0 0 6.5 11v3H3V7.707l5-5 5 5V14z"/>
+            </svg>
+            Home
+        </a>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
