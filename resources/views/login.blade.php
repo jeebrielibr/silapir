@@ -21,7 +21,7 @@
             background: url('https://images.unsplash.com/photo-1749456289357-4e5cbffe9fb3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
             animation: zoomBg 10s infinite alternate;
             filter: brightness(0.7);
-        }
+        } 
         @keyframes zoomBg {
             0% { transform: scale(1); }
             100% { transform: scale(1.1); }
