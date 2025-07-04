@@ -741,6 +741,36 @@
     <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>
 
+    <!-- Floating Chat Button -->
+    <div id="chat-widget" class="chat-widget">
+        <div id="chat-button" class="chat-button">
+            <i class="bi bi-chat-dots-fill"></i>
+        </div>
+        
+        <div id="chat-popup" class="chat-popup">
+            <div class="chat-header">
+                <h5><i class="bi bi-robot"></i> Customer Service AI</h5>
+                <button id="close-chat" class="close-chat">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </div>
+            <div id="chat-messages" class="chat-messages">
+                <div class="message bot-message">
+                    <div class="message-content">
+                        <i class="bi bi-robot"></i>
+                        <p>Halo! Saya adalah AI Customer Service. Ada yang bisa saya bantu?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-input-container">
+                <input type="text" id="chat-input" placeholder="Ketik pesan Anda..." maxlength="500">
+                <button id="send-message" class="send-btn">
+                    <i class="bi bi-send"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- Preloader -->
     <div id="preloader"></div>
 

@@ -229,4 +229,165 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
+  /**
+   * Chat Widget Functionality
+   */
+  const chatButton = document.getElementById('chat-button');
+  const chatPopup = document.getElementById('chat-popup');
+  const closeChat = document.getElementById('close-chat');
+  const chatMessages = document.getElementById('chat-messages');
+  const chatInput = document.getElementById('chat-input');
+  const sendMessage = document.getElementById('send-message');
+  
+  const WEBHOOK_URL = 'https://n8n-yjqcczeu.ap-southeast-1.clawcloudrun.com/webhook/328872a3-dd6f-4cde-a0d0-a5d25881622f';
+
+  // Generate or retrieve session ID
+  function getSessionId() {
+    let sessionId = localStorage.getItem('chat_session_id');
+    if (!sessionId) {
+      sessionId = 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+      localStorage.setItem('chat_session_id', sessionId);
+    }
+    return sessionId;
+  }
+
+  // Toggle chat popup
+  if (chatButton) {
+    chatButton.addEventListener('click', () => {
+      chatPopup.classList.toggle('active');
+      if (chatPopup.classList.contains('active')) {
+        chatInput.focus();
+      }
+    });
+  }
+
+  // Close chat popup
+  if (closeChat) {
+    closeChat.addEventListener('click', () => {
+      chatPopup.classList.remove('active');
+    });
+  }
+
+  // Send message function
+  function sendChatMessage() {
+    const message = chatInput.value.trim();
+    if (!message) return;
+
+    // Add user message to chat
+    addMessage(message, 'user');
+    chatInput.value = '';
+
+    // Show typing indicator
+    showTypingIndicator();
+
+    // Send message to webhook
+    fetch(WEBHOOK_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        message: message,
+        session_id: getSessionId(),
+        timestamp: new Date().toISOString(),
+        userAgent: navigator.userAgent
+      })
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      // Remove typing indicator
+      removeTypingIndicator();
+      
+      // Add bot response
+      const botResponse = data.response || data.message || 'Terima kasih atas pesannya. Tim kami akan segera menghubungi Anda.';
+      addMessage(botResponse, 'bot');
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      removeTypingIndicator();
+      addMessage('Maaf, terjadi kesalahan. Silakan coba lagi nanti.', 'bot');
+    });
+  }
+
+  // Add message to chat
+  function addMessage(text, sender) {
+    const messageDiv = document.createElement('div');
+    messageDiv.className = `message ${sender}-message`;
+    
+    const messageContent = document.createElement('div');
+    messageContent.className = 'message-content';
+    
+    const icon = document.createElement('i');
+    icon.className = sender === 'user' ? 'bi bi-person' : 'bi bi-robot';
+    
+    const messageText = document.createElement('p');
+    messageText.textContent = text;
+    
+    messageContent.appendChild(icon);
+    messageContent.appendChild(messageText);
+    messageDiv.appendChild(messageContent);
+    
+    chatMessages.appendChild(messageDiv);
+    
+    // Scroll to bottom
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  }
+
+  // Show typing indicator
+  function showTypingIndicator() {
+    const typingDiv = document.createElement('div');
+    typingDiv.className = 'message bot-message typing-indicator';
+    typingDiv.id = 'typing-indicator';
+    
+    const typingContent = document.createElement('div');
+    typingContent.className = 'typing-indicator';
+    
+    for (let i = 0; i < 3; i++) {
+      const dot = document.createElement('div');
+      dot.className = 'typing-dot';
+      typingContent.appendChild(dot);
+    }
+    
+    typingDiv.appendChild(typingContent);
+    chatMessages.appendChild(typingDiv);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  }
+
+  // Remove typing indicator
+  function removeTypingIndicator() {
+    const typingIndicator = document.getElementById('typing-indicator');
+    if (typingIndicator) {
+      typingIndicator.remove();
+    }
+  }
+
+  // Send message on button click
+  if (sendMessage) {
+    sendMessage.addEventListener('click', sendChatMessage);
+  }
+
+  // Send message on Enter key
+  if (chatInput) {
+    chatInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        sendChatMessage();
+      }
+    });
+  }
+
+  // Close chat when clicking outside
+  document.addEventListener('click', (e) => {
+    if (chatPopup && chatPopup.classList.contains('active')) {
+      if (!chatPopup.contains(e.target) && !chatButton.contains(e.target)) {
+        chatPopup.classList.remove('active');
+      }
+    }
+  });
+
 })();
